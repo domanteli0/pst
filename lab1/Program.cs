@@ -1,15 +1,18 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System.Reflection;
 using System.Diagnostics;
 
 var driver = new ChromeDriver();
 
 try {
 // TODO: Maximize window
+
+// 1. Atsidaryti tinklalapį https://demowebshop.tricentis.com/
 driver.Url = "https://demowebshop.tricentis.com/";
-driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[7]/a")).Click();
+
+// 2. Spausti 'Gift Cards' kairiajame meniu.
+driver.FindElement(By.XPath("//a[@href=\"/gift-cards\"]/..")).Click();
 
 var over99 = driver.FindElements(
     By.XPath("//div[@class=\"item-box\"][./descendant::span[@class=\"price actual-price\"] > 99]//div[@class=\"picture\"]")
@@ -62,20 +65,20 @@ driver.FindElement(By.CssSelector("#add-to-wishlist-button-71")).Click();
 Thread.Sleep(1000);
 driver.FindElement(By.CssSelector("a[href=\"/wishlist\"]")).Click();
 
-driver.FindElements(By.CssSelector("input[name=\"addtocart\"]")).ToList().ForEach(
+driver.FindElements(By.Name("addtocart")).ToList().ForEach(
     elem => {
         Thread.Sleep(500);
         elem.Click();
     }
 );
 
-driver.FindElement(By.CssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div > div > div.page-body > div.wishlist-content > form > div > div > input.button-2.wishlist-add-to-cart-button")).Click();
+driver.FindElement(By.XPath("//input[@value = 'Add to cart']")).Click();
 
 Debug.Assert(
- driver.FindElement(By.CssSelector("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div > div > div.page-body > div > form > div.cart-footer > div.totals > div.total-info > table > tbody > tr:nth-child(1) > td.cart-total-right > span > span")).Text == "1002600.00"
+    driver.FindElement(By.CssSelector("span.order-total > strong")).Text == "1002600.00"
 );
 
 } finally {
     Thread.Sleep(2000);
-    // driver.Quit();
+    driver.Quit();
 }
