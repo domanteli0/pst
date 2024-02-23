@@ -6,16 +6,7 @@ using OpenQA.Selenium.Support.UI;
 using System.Diagnostics;
 using OpenQA.Selenium.Interactions;
 using System.Security.Principal;
-
-// Užduotis 1:
-// NOTE: REIKIA NAUDOTI EXPLICIT WAIT
-//
-// 1. Atsidaryti https://demoqa.com/
-// 2. Pasirinkti "Widgets" kortelę
-// 3. Pasirinkti meniu punkta "Progress Bar"
-// 4. Spausti mygtuka "Start"
-// 5. Sulaukti, kol bus 100% in paspausti "Reset"
-// 6. Isitikinti, kad progreso eilutė tuscia (0%).
+using System.Numerics;
 
 // Užduotis 2:
 // Galima naudoti implicit waits
@@ -39,6 +30,22 @@ wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 //     return "";
 // });
 
+var fillForm = () => {
+    var addBtn = driver.FindButton(withLabel: "Add");
+    driver.MoveTo(addBtn);
+    addBtn.Click();
+
+    wait.Until(d => d.FindElement(By.CssSelector(".modal-title")));
+
+    driver.FindElement(By.CssSelector("#firstName")).SendKeys("Vardenis");
+    driver.FindElement(By.CssSelector("#lastName")).SendKeys("Pavardenis");
+    driver.FindElement(By.CssSelector("#userEmail")).SendKeys("vardenis@pavardenis.lt");
+    driver.FindElement(By.CssSelector("#age")).SendKeys("30");
+    driver.FindElement(By.CssSelector("#salary")).SendKeys("2000");
+    driver.FindElement(By.CssSelector("#department")).SendKeys("H.R.");
+    driver.FindElement(By.XPath("//button[text() = \"Submit\"]")).Click();
+};
+
 try {
     // Užduotis 1:
     // REIKIA NAUDOTI EXPLICIT WAIT
@@ -50,45 +57,65 @@ try {
     driver.FindElement(By.CssSelector("button.fc-cta-consent")).Click();
 
     // 2. Pasirinkti "Widgets" kortelę
-    driver.FindElement(By.XPath("//div[contains(@class, \"top-card\")]/node()[. = \"Widgets\"]")).Click();
+    driver.FindElement(By.XPath("//div[contains(@class, \"top-card\")]/node()[. = \"Elements\"]")).Click();
 
-    // 3. Pasirinkti meniu punkta "Progress Bar"
-    var progressBar = driver.FindElement(By.XPath("//span[text() = \"Progress Bar\"]/.."));
-    // new Actions(driver)
-    //     .ScrollToElement(progressBar)
-    //     .Perform();
-    int deltaY = progressBar.Location.Y;
-    new Actions(driver)
-        .ScrollByAmount(0, deltaY)
-        .Perform();
+    // 3. Pasirinkti meniu punkta "Web Tables"
+    var progressBar = driver.FindButton(withLabel: "Web Tables", withTagName: "span");
+    driver.MoveTo(progressBar);
     progressBar.Click();
 
-    // 4. Spausti mygtuka "Start"
-    driver.FindElement(By.XPath("//button[text() = \"Start\"]")).Click();
+    // 4. Prideti pakankamai elementų, kad atsirastų antras puslapis puslapiavime
 
-    // 5. Sulaukti, kol bus 100% in paspausti "Reset"
-    wait.Until(wd => 
-        wd.FindElement(By.CssSelector("div[role=\"progressbar\"][aria-valuenow=\"100\"]"))
-    );
-    driver.FindElement(By.CssSelector("#resetButton")).Click();
+    Utils
+        .While(() => driver.FindElement(By.CssSelector("span.-totalPages")).Text.Equals("1"))
+        .Do(() => fillForm());
 
-    // 6. Isitikinti, kad progreso eilutė tuscia (0%).
-    Debug.Assert(
-        driver
-            .FindElement(By.CssSelector("div[role=\"progressbar\"][aria-valuenow=\"0\"]"))
-            .Text == "0%"
-    );
+    // 5. Pasirinkti antra puslapi paspaudus "Next"
+    var nextButton = driver.FindButton(withLabel: "Next");
+    driver.MoveTo(nextButton);
+    nextButton.Click();
+        
+    var beforeCountStr = driver.FindElement(By.CssSelector("span.-totalPages")).Text;
+    var beforeCount = Int32.Parse(beforeCountStr);
+
+    // 6. Ištrinti elementa antrajame puslapyje
+    driver.FindElement(By.XPath("//span[@title = \"Delete\"]")).Click();
+    
+    var afterCountStr = driver.FindElement(By.CssSelector("span.-totalPages")).Text;
+    var afterCount = Int32.Parse(afterCountStr);
+
+    // 7. Įsitikinti, kad automatiškai puslapiavimas perkeliamas į pirmąjį puslapį ir kad puslapiu skaičius sumažėjo lygiai 1
+
+    Debug.Assert(afterCount == 1);
+    Debug.Assert( afterCount - beforeCount == 1);
+
 
 } finally {
     Thread.Sleep(2000);
     if (Environment.GetEnvironmentVariable("DONT_QUIT") is null) { driver.Quit(); }
 }
 
-var uzduotis1 = () => {
-
-};
-
 public static class MyExtentions {
-    public static IWebElement Button(this IWebDriver driver, string withLabel, string withType = "button") =>
-        driver.FindElement(By.XPath($"//{withType}[text() = \"{withLabel}\"]/.."));
+    public static IWebElement FindButton(this IWebDriver driver, string withLabel, string withTagName = "button") =>
+        driver.FindElement(By.XPath($"//{withTagName}[text() = \"{withLabel}\"]"));
+    
+    public static void MoveTo(this IWebDriver driver, IWebElement elem) {
+        int deltaY_ = elem.Location.Y;
+        new Actions(driver)
+            .ScrollByAmount(0, deltaY_)
+            .Perform();
+    }
+}
+
+public static class Utils {
+
+    public static WhileImpl While(Func<bool> pred) => new WhileImpl(pred);
+
+    public record WhileImpl(Func<bool> pred) {
+        public void Do(Action action) {
+            while(pred()) {
+                action();
+            }
+        }
+    }
 }
