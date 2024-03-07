@@ -9,7 +9,6 @@ using OpenQA.Selenium.Internal;
 using OpenQA.Selenium.Support.UI;
 using Xunit.Abstractions;
 using Xunit.Sdk;
-using SeleniumExtras.WaitHelpers;
 using System.Runtime.CompilerServices;
 
 namespace lab4;
@@ -22,40 +21,27 @@ namespace lab4;
 // - Pasinaudoti Unit testų anotacijomis iškviečiant ir uždarant webdriverio sesijas.
 // - Paleisti testus per Jenkins jobą su cron scheduleriu.
 
-
-
-
-// data1.txt: data2.txt:
-// 3rd Album 3rd Album
-// 3rd Album Music 2
-// 3rd Album
-
-public class UnitTest1
+public class CreatedUserFixture
 {
-    private readonly ITestOutputHelper _out;
-
     private Random rng = new Random();
-    private string password = "password";
-    private string email = "boohoo@gmail.com";
+    private readonly string password;
+    private readonly string email;
 
-    public UnitTest1(ITestOutputHelper output)
-    {
-        var (email, password) = createUser();
-        this.email = email;
-        this.password = password;
-        _out = output;
+    public CreatedUserFixture() {
+        (email, password) = createUser();
     }
 
     public (String, String) createUser()
     {
+        IWebDriver driver = new ChromeDriver();
         var password = "password";
         var email = $"{rng.NextInt64()}@gmail.com";
 
-        var (driver, _) = up();
         try
         {
             // Naudotojo kūrimo eiga:
             // 1. Atsidaryti tinklalapį https://demowebshop.tricentis.com/
+            driver.Manage().Window.Maximize();
             driver.Url = "https://demowebshop.tricentis.com/";
 
             // 2. Spausti 'Log in'
@@ -86,14 +72,33 @@ public class UnitTest1
         }
     }
 
+    public string Password => password;
+
+    public string Email => email;
+}
+
+public class UnitTest1 : IClassFixture<CreatedUserFixture>
+{
+    private readonly CreatedUserFixture _userFixture;
+
+    public UnitTest1(CreatedUserFixture userFixture) {
+        _userFixture = userFixture;
+    }
+
+    // Disables: complaining about not invoking `fillInAddress` and `selectExistingAddress`
+    #pragma warning disable CS8974
+    // data1.txt: data2.txt:
+    // 3rd Album 3rd Album
+    // 3rd Album Music 2
+    // 3rd Album
     public static IEnumerable<object[]> Data =>
         new List<object[]> {
             new object[] { new List<string> { "3rd Album", "3rd Album", "3rd Album" }, fillInAddress},
-            // new object[] { new List<string> { "3rd Album", "Music 2" }},
+            new object[] { new List<string> { "3rd Album", "Music 2" }, selectExistingAddress},
         };
+    #pragma warning restore CS8974
 
-    private static void fillInAddress(IWebDriver driver)
-    {
+    private static void fillInAddress(IWebDriver driver) {
         driver
             .FindButton(withTagName: "select", withName: "BillingNewAddress.CountryId")
             .SelectByText("Lithuania");
@@ -104,12 +109,16 @@ public class UnitTest1
         driver.FindButton(withTagName: "input", withName: "BillingNewAddress.PhoneNumber").SendKeys("+370 672 75623");
     }
 
+    private static void selectExistingAddress(IWebDriver driver) {
+        driver
+            .FindButton(withTagName: "select", withName: "billing_address_id")
+            .SelectByText("Naugarduko g., 24", partialMatch: true);
+    }
+
     [Theory]
     [MemberData(nameof(Data))]
     public void Test1(List<string> data, Action<IWebDriver> addressFiller)
     {
-        // --logger "console;verbosity=detailed"
-        _out.WriteLine("Test1 starting");
         var (driver, wait) = up();
 
         // 1. Atsidaryti tinklalapį https://demowebshop.tricentis.com/
@@ -119,8 +128,8 @@ public class UnitTest1
         driver.FindButton(withLabel: "Log in", withTagName: "a").Click();
 
         // 3. Užpildyti 'Email:', 'Password:' ir spausti 'Log in'
-        driver.FindButton(withTagName: "input", withId: "Email").SendKeys(email);
-        driver.FindButton(withTagName: "input", withId: "Password").SendKeys(password);
+        driver.FindButton(withTagName: "input", withId: "Email").SendKeys(_userFixture.Email);
+        driver.FindButton(withTagName: "input", withId: "Password").SendKeys(_userFixture.Password);
         driver.FindButton(withTagName: "input", withValue: "Log in").Click();
 
         // 4. Šoniniame meniu pasirinkti 'Digital downloads'
@@ -185,6 +194,8 @@ public class UnitTest1
             expected: "Your order has been successfully processed!",
             actual: driver.FindButton(withTagName: "div", withAttribute: ("class", "title")).Text
         );
+
+        if (Environment.GetEnvironmentVariable("DONT_QUIT") is null) { driver.Quit(); }
     }
 
     private (IWebDriver, WebDriverWait) up()
@@ -199,6 +210,10 @@ public class UnitTest1
         return (driver, wait);
     }
 
+}
+
+public static class Util
+{
     public static By FindButtonLocator(
         string withTagName = "button",
         string? withLabel = null,
@@ -210,10 +225,6 @@ public class UnitTest1
         By.XPath(
                 $"//{withTagName}{((withLabel is null) ? "" : $"[contains(.,'{withLabel}')]")}{((withId is null) ? "" : $"[./@id = \"{withId}\"]")}{((withValue is null) ? "" : $"[./@value = \"{withValue}\"]")}{((withName is null) ? "" : $"[./@name = \"{withName}\"]")}{((withAttribute is null) ? "" : $"[./@{withAttribute.Value.Item1} = \"{withAttribute.Value.Item2}\"]")}");
 
-}
-
-public static class Util
-{
     public record Unit { }
 
     public static WhileImpl While(Func<bool> pred) => new WhileImpl(pred);
@@ -237,8 +248,6 @@ public static class MyExtentions
         materialDropDown.SelectByText(text, partialMatch);
         return self;
     }
-
-
     public static IWebElement FindButton(
         this ISearchContext driver,
         string withTagName = "button",
@@ -248,10 +257,7 @@ public static class MyExtentions
         string? withName = null,
         (string, string)? withAttribute = null
     ) =>
-        driver.FindElement(By
-            .XPath(
-                $"//{withTagName}{((withLabel is null) ? "" : $"[contains(.,'{withLabel}')]")}{((withId is null) ? "" : $"[./@id = \"{withId}\"]")}{((withValue is null) ? "" : $"[./@value = \"{withValue}\"]")}{((withName is null) ? "" : $"[./@name = \"{withName}\"]")}{((withAttribute is null) ? "" : $"[./@{withAttribute.Value.Item1} = \"{withAttribute.Value.Item2}\"]")}")
-        );
+        driver.FindElement(Util.FindButtonLocator(withTagName, withLabel, withValue, withId, withName, withAttribute));
 
     public static void MoveTo(this IWebDriver driver, IWebElement elem)
     {
