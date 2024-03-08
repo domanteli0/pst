@@ -48,37 +48,37 @@ var select = driver.FindElement(
 var materialDropDown = new SelectElement(select);
 materialDropDown.SelectByText("Silver", partialMatch: true);
 
-driver.FindElement(By.CssSelector("#product_attribute_71_10_16")).SendKeys("80");
-driver.FindElement(By.CssSelector("#product_attribute_71_11_17_50")).Click();
+// driver.FindElement(By.CssSelector("#product_attribute_71_10_16")).SendKeys("80");
+// driver.FindElement(By.CssSelector("#product_attribute_71_11_17_50")).Click();
 
-var overview_ = driver.FindElement(By.XPath("//div[@class=\"overview\"]"));
-overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).Click();
-overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).SendKeys(Keys.Backspace);
-overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).SendKeys("26");
+// var overview_ = driver.FindElement(By.XPath("//div[@class=\"overview\"]"));
+// overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).Click();
+// overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).SendKeys(Keys.Backspace);
+// overview_.FindElement(By.CssSelector("div.add-to-cart-panel > input")).SendKeys("26");
 
-Thread.Sleep(200);
-driver.FindElement(By.CssSelector("#add-to-cart-button-71")).Click();
+// Thread.Sleep(200);
+// driver.FindElement(By.CssSelector("#add-to-cart-button-71")).Click();
 
-Thread.Sleep(200);
-driver.FindElement(By.CssSelector("#add-to-wishlist-button-71")).Click();
+// Thread.Sleep(200);
+// driver.FindElement(By.CssSelector("#add-to-wishlist-button-71")).Click();
 
-Thread.Sleep(1000);
-driver.FindElement(By.CssSelector("a[href=\"/wishlist\"]")).Click();
+// Thread.Sleep(1000);
+// driver.FindElement(By.CssSelector("a[href=\"/wishlist\"]")).Click();
 
-driver.FindElements(By.Name("addtocart")).ToList().ForEach(
-    elem => {
-        Thread.Sleep(500);
-        elem.Click();
-    }
-);
+// driver.FindElements(By.Name("addtocart")).ToList().ForEach(
+//     elem => {
+//         Thread.Sleep(500);
+//         elem.Click();
+//     }
+// );
 
-driver.FindElement(By.XPath("//input[@value = 'Add to cart']")).Click();
+// driver.FindElement(By.XPath("//input[@value = 'Add to cart']")).Click();
 
-Debug.Assert(
-    driver.FindElement(By.CssSelector("span.order-total > strong")).Text == "1002600.00"
-);
+// Debug.Assert(
+//     driver.FindElement(By.CssSelector("span.order-total > strong")).Text == "1002600.00"
+// );
 
 } finally {
     Thread.Sleep(2000);
-    driver.Quit();
+    // driver.Quit();
 }

@@ -1,25 +1,18 @@
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using Microsoft.VisualBasic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools.V119.Runtime;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Internal;
 using OpenQA.Selenium.Support.UI;
-using Xunit.Abstractions;
-using Xunit.Sdk;
-using System.Runtime.CompilerServices;
 
 namespace lab4;
 
 // Užduotis:
 // Sukurti du automatinius testus, uždavinio sąlygos:
-// - Prieš vykdant testus automatiniu būdu turi būti sukurtas naujas vartotojas.
-// - Abu testai turi prisijungti tuo pačiu sukurtuoju vartotoju.
-// - Testai ir naudotojo kūrimas turi būti atliekami atskirose webdriverio sesijose.
-// - Pasinaudoti Unit testų anotacijomis iškviečiant ir uždarant webdriverio sesijas.
-// - Paleisti testus per Jenkins jobą su cron scheduleriu.
+// - [X] Prieš vykdant testus automatiniu būdu turi būti sukurtas naujas vartotojas.
+// - [X] Abu testai turi prisijungti tuo pačiu sukurtuoju vartotoju.
+// - [X] Testai ir naudotojo kūrimas turi būti atliekami atskirose webdriverio sesijose.
+// - [ ] Pasinaudoti Unit testų anotacijomis iškviečiant ir uždarant webdriverio sesijas.
+// - [ ] Paleisti testus per Jenkins jobą su cron scheduleriu.
+// - [ ] Sutvarkyt checkout (4)
 
 public class CreatedUserFixture
 {
