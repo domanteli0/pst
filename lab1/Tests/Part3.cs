@@ -112,7 +112,9 @@ public class Part3 : IDisposable
         driver.FindElements(By.CssSelector("button.fc-cta-consent")).Take(1).ToList().ForEach((consent) => consent.Click());
 
         // 2. Pasirinkti "Widgets" kortelę
-        driver.FindElement(By.XPath("//div[contains(@class, \"top-card\")]/node()[. = \"Elements\"]")).Click();
+        var elem = driver.FindElement(By.XPath("//div[contains(@class, \"top-card\")]/node()[. = \"Elements\"]"));
+        driver.MoveTo(elem);
+        elem.Click();
 
         // 3. Pasirinkti meniu punkta "Web Tables"
         var progressBar = driver.FindButton(withLabel: "Web Tables", withTagName: "span");

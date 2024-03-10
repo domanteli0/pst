@@ -12,7 +12,7 @@ namespace lab4;
 // - [X] Abu testai turi prisijungti tuo pačiu sukurtuoju vartotoju.
 // - [X] Testai ir naudotojo kūrimas turi būti atliekami atskirose webdriverio sesijose.
 // - [+-] Pasinaudoti Unit testų anotacijomis iškviečiant ir uždarant webdriverio sesijas.
-// - [ ] Paleisti testus per Jenkins jobą su cron scheduleriu.
+// - [X] Paleisti testus per Jenkins jobą su cron scheduleriu.
 
 public class Part4 : IClassFixture<CreatedUserFixture>
 {
