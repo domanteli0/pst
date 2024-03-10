@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools.V119.ServiceWorker;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
@@ -26,7 +27,7 @@ public class CreatedUserFixture
 
     public (String, String) createUser()
     {
-        IWebDriver driver = new ChromeDriver();
+        IWebDriver driver = Util.up();
         var password = "password";
         var email = $"{rng.NextInt64()}@gmail.com";
 
@@ -112,7 +113,7 @@ public class UnitTest1 : IClassFixture<CreatedUserFixture>
     [MemberData(nameof(Data))]
     public void Test1(List<string> data, Action<IWebDriver> addressFiller)
     {
-        var (driver, wait) = up();
+        var driver = Util.up();
 
         // 1. Atsidaryti tinklalapį https://demowebshop.tricentis.com/
         driver.Url = "https://demowebshop.tricentis.com/";
@@ -159,9 +160,9 @@ public class UnitTest1 : IClassFixture<CreatedUserFixture>
         driver.FindButton(withTagName: "input", withValue: "Continue").Click();
         
         // 9. 'Payment Method' spausti 'Continue'
-        WebDriverWait _wait = new(driver, TimeSpan.FromSeconds(60));
-        _wait.IgnoreExceptionTypes(typeof(ElementNotInteractableException));
-        _wait.Until(drv => drv
+        WebDriverWait wait = new(driver, TimeSpan.FromSeconds(60));
+        wait.IgnoreExceptionTypes(typeof(ElementNotInteractableException));
+        wait.Until(drv => drv
             .FindButton(
                 withTagName: "input",
                 withValue: "Continue",
@@ -170,7 +171,7 @@ public class UnitTest1 : IClassFixture<CreatedUserFixture>
         );
 
         // 10. 'Payment Information' spausti 'Continue'
-        _wait.Until(drv => drv
+        wait.Until(drv => drv
             .FindButton(
                 withTagName: "input",
                 withValue: "Continue",
@@ -179,9 +180,13 @@ public class UnitTest1 : IClassFixture<CreatedUserFixture>
         );
 
         // 11. 'Confirm Order' spausti 'Confirm'
-        _wait.Until(drv => drv.FindButton(withTagName: "input", withValue: "Confirm").Click());
+        wait.Until(drv => drv.FindButton(withTagName: "input", withValue: "Confirm").Click());
 
         // 12. Įsitikinti, kad užsakymas sėkmingai užskaitytas.
+        wait = new(driver, TimeSpan.FromSeconds(60)) {
+            PollingInterval = TimeSpan.FromSeconds(1)
+        };
+        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
         wait.Until(drv => drv.FindButton(withTagName: "div", withAttribute: ("class", "title")).Displayed);
         Assert.Equal(
             expected: "Your order has been successfully processed!",
@@ -191,22 +196,23 @@ public class UnitTest1 : IClassFixture<CreatedUserFixture>
         if (Environment.GetEnvironmentVariable("DONT_QUIT") is null) { driver.Quit(); }
     }
 
-    private (IWebDriver, WebDriverWait) up()
-    {
-        IWebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new(driver, TimeSpan.FromSeconds(60));
-
-        driver.Manage().Window.Maximize();
-
-        wait.PollingInterval = TimeSpan.FromMilliseconds(2000);
-        wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-        return (driver, wait);
-    }
-
 }
 
 public static class Util
 {
+    public static IWebDriver up()
+    {
+        ChromeOptions options = new ChromeOptions();
+        options.AddArguments("--headless");
+        options.AddArguments("--no-sandbox");
+        options.AddArguments("--disable-dev-shm-usage");
+
+        IWebDriver driver = new ChromeDriver(options);
+
+        driver.Manage().Window.Maximize();
+        return driver;
+    }
+
     public static By FindButtonLocator(
         string withTagName = "button",
         string? withLabel = null,
