@@ -39,6 +39,8 @@ public class Part1And2 : IDisposable
         driver.FindElement(By.CssSelector("#add-to-wishlist-button-4")).Click();
 
         Thread.Sleep(1000);
+        driver.MoveBy(y: -10000);
+        Thread.Sleep(1000);
         driver.FindElement(By.XPath("//a[@href=\"/jewelry\"]/..")).Click();
 
         Thread.Sleep(1000);
@@ -79,8 +81,11 @@ public class Part1And2 : IDisposable
 
         driver.FindElement(By.XPath("//input[@value = 'Add to cart']")).Click();
 
-        Debug.Assert(
-            driver.FindElement(By.CssSelector("span.order-total > strong")).Text == "1002600.00"
+        Thread.Sleep(500);
+
+        Assert.Equal(
+            expected: "1002600.00",
+            actual: driver.FindElement(By.CssSelector("span.order-total > strong")).Text
         );
 
     }

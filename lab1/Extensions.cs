@@ -4,7 +4,8 @@ using OpenQA.Selenium.Support.UI;
 
 public static class Extensions
 {
-    public static void Down(this IWebDriver driver) {
+    public static void Down(this IWebDriver driver)
+    {
         if (Environment.GetEnvironmentVariable("DONT_QUIT") is null) { driver.Quit(); }
     }
 
@@ -29,13 +30,14 @@ public static class Extensions
     ) =>
         driver.FindElement(Util.FindButtonLocator(withTagName, withLabel, withValue, withId, withName, withAttribute));
 
-    public static void MoveTo(this IWebDriver driver, IWebElement elem)
-    {
-        int deltaY_ = elem.Location.Y;
+    public static void MoveTo(this IWebDriver driver, IWebElement elem) =>
+        driver.MoveBy(y: elem.Location.Y);
+
+    public static void MoveBy(this IWebDriver driver, int y) =>
         new Actions(driver)
-            .ScrollByAmount(0, deltaY_)
+            .ScrollByAmount(0, y)
             .Perform();
-    }
+
 
     public static void Until(this WebDriverWait wait, Action<IWebDriver> action)
     {
