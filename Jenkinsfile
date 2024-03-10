@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build lab4/lab4.csproj'
+                sh 'dotnet build lab1'
             }
         }
         stage('Test') {
             steps {
-                sh 'dotnet test lab4/lab4.csproj'
+                sh 'dotnet test lab1'
             }
         }
     }
