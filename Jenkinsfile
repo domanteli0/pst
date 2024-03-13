@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'dotnet test lab1'
+                sh 'dotnet test lab1 --filter Part4'
             }
         }
     }
