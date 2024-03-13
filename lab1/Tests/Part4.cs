@@ -14,14 +14,16 @@ namespace lab4;
 // - [+-] Pasinaudoti Unit testų anotacijomis iškviečiant ir uždarant webdriverio sesijas.
 // - [X] Paleisti testus per Jenkins jobą su cron scheduleriu.
 
-public class Part4 : IClassFixture<CreatedUserFixture>
+public class Part4 : IClassFixture<CreatedUserFixture>, IDisposable
 {
-    private readonly CreatedUserFixture _userFixture;
+    private readonly CreatedUserFixture userFixture;
+    private readonly IWebDriver driver;
 
-    public Part4(CreatedUserFixture userFixture)
-    {
-        _userFixture = userFixture;
+    public Part4(CreatedUserFixture userFixture) {
+        this.userFixture = userFixture;
+        this.driver = Util.up();
     }
+    public void Dispose() => driver.Down();
 
     private static void fillInAddress(IWebDriver driver)
     {
@@ -59,8 +61,6 @@ public class Part4 : IClassFixture<CreatedUserFixture>
     [MemberData(nameof(Data))]
     public void Test1(List<string> data, Action<IWebDriver> addressFiller)
     {
-        var driver = Util.up();
-
         // 1. Atsidaryti tinklalapį https://demowebshop.tricentis.com/
         driver.Url = "https://demowebshop.tricentis.com/";
 
@@ -68,8 +68,8 @@ public class Part4 : IClassFixture<CreatedUserFixture>
         driver.FindButton(withLabel: "Log in", withTagName: "a").Click();
 
         // 3. Užpildyti 'Email:', 'Password:' ir spausti 'Log in'
-        driver.FindButton(withTagName: "input", withId: "Email").SendKeys(_userFixture.Email);
-        driver.FindButton(withTagName: "input", withId: "Password").SendKeys(_userFixture.Password);
+        driver.FindButton(withTagName: "input", withId: "Email").SendKeys(userFixture.Email);
+        driver.FindButton(withTagName: "input", withId: "Password").SendKeys(userFixture.Password);
         driver.FindButton(withTagName: "input", withValue: "Log in").Click();
 
         // 4. Šoniniame meniu pasirinkti 'Digital downloads'
@@ -139,7 +139,5 @@ public class Part4 : IClassFixture<CreatedUserFixture>
             expected: "Your order has been successfully processed!",
             actual: driver.FindButton(withTagName: "div", withAttribute: ("class", "title")).Text
         );
-
     }
-
 }
