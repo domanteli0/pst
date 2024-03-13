@@ -106,7 +106,7 @@ public class Part4 : IClassFixture<CreatedUserFixture>, IDisposable
         driver.FindButton(withTagName: "input", withValue: "Continue").Click();
 
         // 9. 'Payment Method' spausti 'Continue'
-        WebDriverWait wait = new(driver, TimeSpan.FromSeconds(60));
+        WebDriverWait wait = new(driver, TimeSpan.FromSeconds(100));
         wait.IgnoreExceptionTypes(typeof(ElementNotInteractableException));
         wait.Until(drv => drv
             .FindButton(
