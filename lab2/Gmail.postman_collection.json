@@ -13,9 +13,18 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
-							"pm.collectionVariables.set(\"email-id\", jsonData.id);",
-							""
+							"",
+							"",
+							"pm.test(\"Isitikinti Assertionais, kad laisko sukurimas/modifikavimas/grazinimas veikia kaip turètu\",",
+							"    () => {",
+							"        var jsonData = JSON.parse(responseBody);",
+							"",
+							"        pm.response.to.have.status(200);",
+							"        pm.expect(jsonData).to.have.property('id');",
+							"        ",
+							"        pm.collectionVariables.set(\"email-id\", jsonData.id);",
+							"    }",
+							")"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -88,10 +97,17 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"var jsonData = JSON.parse(responseBody);",
+							"pm.test(\"Isitikinti Assertionais, kad laisko sukurimas/modifikavimas/grazinimas veikia kaip turètu\",",
+							"    () => {",
+							"        var jsonData = JSON.parse(responseBody);",
 							"",
-							"pm.collectionVariables.set(\"label-id\", jsonData.id);",
-							""
+							"        pm.response.to.have.status(200);",
+							"        pm.expect(jsonData).to.have.property('id');",
+							"        pm.expect(jsonData).to.have.property('name');",
+							"",
+							"        pm.collectionVariables.set(\"label-id\", jsonData.id);",
+							"    }",
+							")"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -152,7 +168,12 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Isitikinti Assertionais, kad laisko sukurimas/modifikavimas/grazinimas veikia kaip turètu\",",
+							"    () => {",
+							"        var jsonData = JSON.parse(responseBody);",
+							"        pm.response.to.have.status(200);",
+							"    }",
+							")"
 						],
 						"type": "text/javascript",
 						"packages": {}

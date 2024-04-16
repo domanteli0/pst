@@ -1,0 +1,2 @@
+run-newman:
+	newman run Gmail.postman_collection.json -e secrets.postman_environment.json
