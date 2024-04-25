@@ -1,0 +1,17 @@
+default: run
+
+run:
+    JVM_ARGS="-Xms1024m -Xmx1024m" jmeter -n -t lab3.jmx \
+         -l jmeter/results.csv -j jmeter/jmeter.log -e -o jmeter/results
+    mkdir jmeter/plain
+    mv *.plain jmeter/plain/
+
+open:
+    JVM_ARGS="-Xms1024m -Xmx1024m" jmeter -t lab3.jmx \
+         -l jmeter/results.csv -j jmeter/jmeter.log -e -o jmeter/results
+
+results:
+    open jmeter/results/index.html
+
+trash:
+    trash jmeter *.plain jmeter.log *.unknown *.json
