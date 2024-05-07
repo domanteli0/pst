@@ -1,0 +1,6 @@
+copy-cert:
+    cp /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/ApacheJMeterTemporaryRootCA.crt ./ApacheJMeterTemporaryRootCA.crt
+
+open:
+    /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/jmeter.sh -t ~/Projects/pst/lab3-part2/demoblaze.jmx
+
