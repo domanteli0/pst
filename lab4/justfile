@@ -1,0 +1,9 @@
+download-server:
+    wget https://github.com/WebGoat/WebGoat/releases/download/v2023.8/webgoat-2023.8.jar
+    mv webgoat-2023.8.jar webgoat.jar
+
+run $WEBGOAT_PORT="8090":
+    java -jar webgoat.jar
+
+open:
+    open http://localhost:8090/WebGoat
