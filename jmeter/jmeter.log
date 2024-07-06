@@ -1,0 +1,29 @@
+2024-04-27 19:28:14,412 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-04-27 19:28:14,430 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2024-04-27 19:28:14,430 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2024-04-27 19:28:14,433 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: Version 5.6.3
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: java.version=21.0.2
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: os.name=Mac OS X
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: os.arch=aarch64
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: os.version=14.4.1
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: java.awt.headless=true
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-04-27 19:28:14,434 INFO o.a.j.JMeter: Available Processors =8
+2024-04-27 19:28:14,441 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-04-27 19:28:14,442 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-04-27 19:28:14,442 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2024-04-27 19:28:14,442 INFO o.a.j.JMeter: user.dir  =/Users/domantelio/Projects/pst
+2024-04-27 19:28:14,442 INFO o.a.j.JMeter: PWD       =/Users/domantelio/Projects/pst
+2024-04-27 19:28:14,443 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Domantelios-MacBook-Pro.local FullName: localhost
+2024-04-27 19:28:14,452 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/domantelio/Projects/pst/jmeter/results'
+2024-04-27 19:28:14,452 ERROR o.a.j.JMeter: An error occurred: 
+org.apache.jmeter.report.config.ConfigurationException: The file /Users/domantelio/Projects/pst/lab3.jmx doesn't exist or can't be opened
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:950) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:940) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.JMeter.start(JMeter.java:508) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259) [ApacheJMeter.jar:5.6.3]

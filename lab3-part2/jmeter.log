@@ -1,84 +1,867 @@
-2024-05-13 17:33:57,309 INFO o.a.j.u.JMeterUtils: Setting Locale to en_LT
-2024-05-13 17:33:57,333 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
-2024-05-13 17:33:57,333 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: Version 5.6.3
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: java.version=21.0.2
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: os.name=Mac OS X
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: os.arch=aarch64
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: os.version=14.4.1
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: file.encoding=UTF-8
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: java.awt.headless=null
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: Max memory     =4294967296
-2024-05-13 17:33:57,338 INFO o.a.j.JMeter: Available Processors =8
-2024-05-13 17:33:57,345 INFO o.a.j.JMeter: Default Locale=English (Lithuania)
-2024-05-13 17:33:57,345 INFO o.a.j.JMeter: JMeter  Locale=English (Lithuania)
-2024-05-13 17:33:57,345 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
-2024-05-13 17:33:57,345 INFO o.a.j.JMeter: user.dir  =/Users/domantelio/Projects/pst/lab3-part2
-2024-05-13 17:33:57,345 INFO o.a.j.JMeter: PWD       =/Users/domantelio/Projects/pst/lab3-part2
-2024-05-13 17:33:57,347 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Domantelios-MacBook-Pro.local FullName: localhost
-2024-05-13 17:33:57,357 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2024-05-13 17:33:57,727 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
-2024-05-13 17:33:59,076 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-05-13 17:33:59,230 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-05-13 17:33:59,381 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-8dd6257454a91e09b8691d1e7d9c12f1-gui
-2024-05-13 17:34:00,646 INFO o.a.j.JMeterGuiLauncher: Loading file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
-2024-05-13 17:34:00,649 INFO o.a.j.s.FileServer: Default base='/Users/domantelio/Projects/pst/lab3-part2'
-2024-05-13 17:34:00,649 INFO o.a.j.s.FileServer: Set new base='/Users/domantelio/Projects/pst/lab3-part2'
-2024-05-13 17:34:00,811 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2024-05-13 17:34:00,820 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2024-05-13 17:34:00,822 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2024-05-13 17:34:00,824 INFO o.a.j.s.SaveService: Loading file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
-2024-05-13 17:34:00,849 WARN o.j.r.p.TestPlanAnalyzer: Cannot parse file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
+2024-05-22 17:46:11,116 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-05-22 17:46:11,135 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2024-05-22 17:46:11,135 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: Version 5.6.3
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: java.version=21.0.2
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: os.name=Mac OS X
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: os.arch=aarch64
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: os.version=14.4.1
+2024-05-22 17:46:11,140 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-05-22 17:46:11,141 INFO o.a.j.JMeter: java.awt.headless=null
+2024-05-22 17:46:11,141 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-05-22 17:46:11,141 INFO o.a.j.JMeter: Available Processors =8
+2024-05-22 17:46:11,149 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-05-22 17:46:11,149 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-05-22 17:46:11,149 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2024-05-22 17:46:11,149 INFO o.a.j.JMeter: user.dir  =/Users/domantelio/Projects/pst/lab3-part2
+2024-05-22 17:46:11,150 INFO o.a.j.JMeter: PWD       =/Users/domantelio/Projects/pst/lab3-part2
+2024-05-22 17:46:11,151 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Domantelios-MacBook-Pro.local FullName: localhost
+2024-05-22 17:46:11,162 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-05-22 17:46:11,510 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2024-05-22 17:46:12,608 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:46:12,704 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:46:12,804 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-71c3ea5e016e146b0acaddab2020bcfa-gui
+2024-05-22 17:46:14,468 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.9, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2024-05-22 17:46:14,469 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2024-05-22 17:46:17,720 INFO o.a.j.s.FileServer: Default base='/Users/domantelio/Projects/pst/lab3-part2'
+2024-05-22 17:46:18,550 INFO o.a.j.g.a.t.TemplateManager: Reading templates from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/templates/templates.xml
+2024-05-22 17:46:32,748 INFO o.a.j.g.a.Load: Loading file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
+2024-05-22 17:46:32,748 INFO o.a.j.s.FileServer: Set new base='/Users/domantelio/Projects/pst/lab3-part2'
+2024-05-22 17:46:32,875 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-05-22 17:46:32,880 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-05-22 17:46:32,881 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-05-22 17:46:32,882 INFO o.a.j.s.SaveService: Loading file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
+2024-05-22 17:46:32,909 WARN o.j.r.p.TestPlanAnalyzer: Cannot parse file: /Users/domantelio/Projects/pst/lab3-part2/demoblaze.jmx
 org.xml.sax.SAXParseException: Character reference "&#x0" is an invalid XML character.
 	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) ~[xercesImpl-2.12.2.jar:?]
 	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) ~[xercesImpl-2.12.2.jar:?]
 	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122) ~[?:?]
-	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.getNodeListWithClassNames(TestPlanAnalyzer.java:112) [jmeter-plugins-manager-1.9.jar:?]
-	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.analyze(TestPlanAnalyzer.java:37) [jmeter-plugins-manager-1.9.jar:?]
-	at org.jmeterplugins.repository.plugins.PluginSuggester.analyzeTestPlan(PluginSuggester.java:51) [jmeter-plugins-manager-1.9.jar:?]
-	at org.jmeterplugins.repository.plugins.PluginSuggester.findPluginsToInstall(PluginSuggester.java:44) [jmeter-plugins-manager-1.9.jar:?]
-	at org.jmeterplugins.repository.plugins.PluginSuggester.checkAndSuggest(PluginSuggester.java:28) [jmeter-plugins-manager-1.9.jar:?]
-	at org.jmeterplugins.repository.logging.LoggerAppender.append(LoggerAppender.java:33) [jmeter-plugins-manager-1.9.jar:?]
-	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:705) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:663) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:639) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:575) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:92) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.core.Logger.log(Logger.java:169) [log4j-core-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2933) [log4j-api-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2886) [log4j-api-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2868) [log4j-api-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2664) [log4j-api-2.22.1.jar:2.22.1]
-	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:2429) [log4j-api-2.22.1.jar:2.22.1]
-	at org.apache.logging.slf4j.Log4jLogger.info(Log4jLogger.java:184) [log4j-slf4j-impl-2.22.1.jar:2.22.1]
-	at org.apache.jmeter.save.SaveService.loadTree(SaveService.java:425) [ApacheJMeter_core.jar:5.6.3]
-	at org.apache.jmeter.JMeterGuiLauncher$loadFile$2.invokeSuspend(JMeterGuiLauncher.kt:140) [ApacheJMeter_core.jar:5.6.3]
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33) [kotlin-stdlib-1.9.22.jar:1.9.22-release-704]
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108) [kotlinx-coroutines-core-jvm-1.7.3.jar:?]
-	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584) [kotlinx-coroutines-core-jvm-1.7.3.jar:?]
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793) [kotlinx-coroutines-core-jvm-1.7.3.jar:?]
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697) [kotlinx-coroutines-core-jvm-1.7.3.jar:?]
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684) [kotlinx-coroutines-core-jvm-1.7.3.jar:?]
-2024-05-13 17:34:01,057 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2024-05-13 17:34:01,058 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
-2024-05-13 17:34:01,080 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-05-13 17:34:01,080 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-05-13 17:34:01,080 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-05-13 17:34:01,080 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-05-13 17:34:01,080 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2024-05-13 17:34:01,081 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2024-05-13 17:34:01,298 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.9, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
-2024-05-13 17:34:01,300 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
-2024-05-13 17:34:01,323 INFO o.a.j.s.FileServer: Set new base='/Users/domantelio/Projects/pst/lab3-part2'
-2024-05-13 17:34:03,620 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2024-05-13 17:34:03,621 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2024-05-13 17:34:03,621 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2024-05-13 17:34:03,621 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2024-05-13 17:34:03,700 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2024-05-13 17:34:03,716 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.getNodeListWithClassNames(TestPlanAnalyzer.java:112) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.analyze(TestPlanAnalyzer.java:37) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.analyzeTestPlan(PluginSuggester.java:51) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.findPluginsToInstall(PluginSuggester.java:44) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.checkAndSuggest(PluginSuggester.java:28) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.jmeterplugins.repository.logging.LoggerAppender.append(LoggerAppender.java:33) ~[jmeter-plugins-manager-1.9.jar:?]
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:160) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:133) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:124) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:88) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:705) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:663) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:639) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:575) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:92) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:169) ~[log4j-core-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2933) ~[log4j-api-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2886) ~[log4j-api-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2868) ~[log4j-api-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2664) ~[log4j-api-2.22.1.jar:2.22.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:2429) ~[log4j-api-2.22.1.jar:2.22.1]
+	at org.apache.logging.slf4j.Log4jLogger.info(Log4jLogger.java:184) ~[log4j-slf4j-impl-2.22.1.jar:2.22.1]
+	at org.apache.jmeter.save.SaveService.loadTree(SaveService.java:425) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:131) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:103) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.doActionAfterCheck(Load.java:90) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:44) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:83) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:65) ~[ApacheJMeter_core.jar:5.6.3]
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+2024-05-22 17:46:33,069 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2024-05-22 17:46:33,069 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2024-05-22 17:46:33,077 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2024-05-22 17:46:35,593 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-05-22 17:46:35,593 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2024-05-22 17:46:35,593 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-05-22 17:46:35,593 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-05-22 17:46:35,664 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:46:35,677 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:46:35,719 INFO o.a.j.s.FileServer: Set new base='/Users/domantelio/Projects/pst/lab3-part2'
+2024-05-22 17:46:48,788 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2024-05-22 17:46:48,789 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2024-05-22 17:46:48,821 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:46:48,896 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 17:46:48,896 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 17:46:48,897 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 17:46:48,909 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 17:47:10,145 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.http.proxy.SamplerCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-05-22 17:47:10,156 INFO o.a.j.p.h.p.Proxy: Proxy will remove the headers: If-Modified-Since,If-None-Match,Host
+2024-05-22 17:47:10,159 INFO o.a.j.p.h.p.ProxyControl: [65231]  Creating entry ac.duckduckgo.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:47:12,994 INFO o.a.j.p.h.p.Proxy: [65231]  KeyStore for SSL loaded OK and put host 'ac.duckduckgo.com' in map with key (ac.duckduckgo.com)
+2024-05-22 17:47:13,005 WARN o.a.j.p.h.p.Proxy: [65246]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,005 WARN o.a.j.p.h.p.Proxy: [65247]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,005 WARN o.a.j.p.h.p.Proxy: [65231]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,006 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 17:47:13,017 WARN o.a.j.p.h.p.Proxy: [65245]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,026 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Domantelios-MacBook-Pro.local
+2024-05-22 17:47:13,033 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2024-05-22 17:47:13,034 WARN o.a.j.p.h.p.Proxy: [65244]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,050 WARN o.a.j.p.h.p.Proxy: [65243]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,057 WARN o.a.j.p.h.p.Proxy: [65248]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,066 WARN o.a.j.p.h.p.Proxy: [65242]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,082 WARN o.a.j.p.h.p.Proxy: [65241]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,097 WARN o.a.j.p.h.p.Proxy: [65240]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,112 WARN o.a.j.p.h.p.Proxy: [65239]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,126 WARN o.a.j.p.h.p.Proxy: [65238]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,137 WARN o.a.j.p.h.p.Proxy: [65237]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,145 WARN o.a.j.p.h.p.Proxy: [65236]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,154 WARN o.a.j.p.h.p.Proxy: [65235]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,162 WARN o.a.j.p.h.p.Proxy: [65234]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,171 WARN o.a.j.p.h.p.Proxy: [65233]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,179 WARN o.a.j.p.h.p.Proxy: [65232]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:13,518 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-1 into controller test1
+2024-05-22 17:47:13,522 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-3 into controller test1
+2024-05-22 17:47:13,525 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-2 into controller test1
+2024-05-22 17:47:13,585 INFO o.a.j.p.h.p.ProxyControl: [65253]  Creating entry duckduckgo.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:47:16,102 INFO o.a.j.p.h.p.Proxy: [65253]  KeyStore for SSL loaded OK and put host 'duckduckgo.com' in map with key (duckduckgo.com)
+2024-05-22 17:47:16,162 WARN o.a.j.p.h.p.Proxy: [65253]  Problem with SSL certificate for url  for 'duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:47:16,373 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-4 into controller test1
+2024-05-22 17:47:16,378 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-5 into controller test1
+2024-05-22 17:47:16,381 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-6 into controller test1
+2024-05-22 17:47:34,069 INFO o.a.j.p.h.p.ProxyControl: [65258]  Creating entry aus5.mozilla.org in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:47:37,060 INFO o.a.j.p.h.p.Proxy: [65258]  KeyStore for SSL loaded OK and put host 'aus5.mozilla.org' in map with key (aus5.mozilla.org)
+2024-05-22 17:47:37,100 WARN o.a.j.p.h.p.Proxy: [65258]  Problem with SSL certificate for url  for 'aus5.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:47:37,345 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-7 into controller test1
+2024-05-22 17:47:37,349 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-8 into controller test1
+2024-05-22 17:47:37,352 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-9 into controller test1
+2024-05-22 17:47:49,105 INFO o.a.j.p.h.p.ProxyControl: [65262]  Creating entry spocs.getpocket.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:47:51,422 INFO o.a.j.p.h.p.Proxy: [65262]  KeyStore for SSL loaded OK and put host 'spocs.getpocket.com' in map with key (spocs.getpocket.com)
+2024-05-22 17:47:51,458 WARN o.a.j.p.h.p.Proxy: [65262]  Problem with SSL certificate for url  for 'spocs.getpocket.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:47:51,614 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-10 into controller test1
+2024-05-22 17:47:51,618 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-11 into controller test1
+2024-05-22 17:47:51,621 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-12 into controller test1
+2024-05-22 17:47:59,371 WARN o.a.j.p.h.p.Proxy: [65266]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:47:59,515 WARN o.a.j.p.h.p.Proxy: [65270]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:47:59,539 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-13 into controller test1
+2024-05-22 17:47:59,547 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-15 into controller test1
+2024-05-22 17:47:59,552 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-14 into controller test1
+2024-05-22 17:47:59,631 WARN o.a.j.p.h.p.Proxy: [65274]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:47:59,744 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-16 into controller test1
+2024-05-22 17:47:59,748 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-18 into controller test1
+2024-05-22 17:47:59,751 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-17 into controller test1
+2024-05-22 17:47:59,754 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-19 into controller test1
+2024-05-22 17:47:59,949 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-20 into controller test1
+2024-05-22 17:47:59,953 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-21 into controller test1
+2024-05-22 17:48:00,377 WARN o.a.j.p.h.p.Proxy: [65278]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2024-05-22 17:48:00,562 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/canonical.html-22 into controller test1
+2024-05-22 17:48:00,569 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-23 into controller test1
+2024-05-22 17:48:00,574 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/success.txt-24 into controller test1
+2024-05-22 17:48:02,806 INFO o.a.j.p.h.p.ProxyControl: [65286]  Creating entry luj.sayasdf.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:48:03,000 INFO o.a.j.p.h.p.ProxyCon2024-05-22 17:49:10,917 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 17:49:10,917 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 17:49:10,918 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 17:49:10,918 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 17:50:21,728 INFO o.a.j.p.h.p.Proxy: [65303]  KeyStore for SSL loaded OK and put host 'ac.duckduckgo.com' in map with key (ac.duckduckgo.com)
+2024-05-22 17:50:21,789 WARN o.a.j.p.h.p.Proxy: [65303]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:50:21,855 WARN o.a.j.p.h.p.Proxy: [65304]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:50:22,066 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2024-05-22 17:50:22,068 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2024-05-22 17:50:22,068 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2024-05-22 17:50:22,104 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2024-05-22 17:50:22,104 INFO o.a.j.u.SSLManager: KeyStore created OK
+2024-05-22 17:50:22,105 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2024-05-22 17:50:22,295 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-4 into controller test1
+2024-05-22 17:50:22,298 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-5 into controller test1
+2024-05-22 17:50:22,500 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-6 into controller test1
+2024-05-22 17:50:26,744 INFO o.a.j.p.h.p.ProxyControl: [65312]  Creating entry www.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:29,299 INFO o.a.j.p.h.p.Proxy: [65312]  KeyStore for SSL loaded OK and put host 'www.google.com' in map with key (www.google.com)
+2024-05-22 17:50:29,837 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/-7 into controller test1
+2024-05-22 17:50:29,886 INFO o.a.j.p.h.p.ProxyControl: [65317]  Creating entry lh3.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:30,038 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/ss/k=xjs.hd.cdwAfs1ZQDU.L.F4.O/am=AEYBAAAAAACAAQAAAAAAAAAAAAAAAAAEAEAAAAAAACgABMIBEJxsWAwAABAAAAAAAABgAABQYDwAAAAQkEAAgAFAgAAAAAQABAIAARFABJAEggwEACCSFQYgFQAYAAAAgAAJAAAAABBAAASyBwACHhIAACCgEwQgAQAA2EAQAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAAQQAAAABAAAAAAAAAAAAAAAAAAAAAB/d=1/ed=1/rs=ACT90oE76AbawU_AWlqc6YMh1yL6uFKLQg/m=cdos,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl-8 into controller test1
+2024-05-22 17:50:30,044 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?s=webhp&t=cap&atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&rt=wsrt.8,cbt.2993,hst.2993&opi=89978449-10 into controller test1
+2024-05-22 17:50:30,052 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png-11 into controller test1
+2024-05-22 17:50:30,069 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/js/k=xjs.hd.en.-5YglXcrtOQ.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACGAAgAAUBwAAAYAAAAAAAAQBABgAABC8D4ACAEEkMAAgCEIggA8lA0ABDABAAEABAAEAhAEAAASBAAAFAAAAAAAAAAAAAAABxCAAAAAAAAAAAAAAACgEwBAAAAQ2EAQAAACAAAAkAeA4AAYpDAAAAAAAAAAAAAAAAQwQTAXEhAQAQEAAAAAAAAAAAAAAEhJJxYm/d=1/ed=1/dg=2/rs=ACT90oEpRJPaLEF5ALY3Xv7sJ3lzWZ4XFg/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf,FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hezEbd;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KpRAue:Tia57b;LBgRLc:SdcwHb,XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe,KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO,fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZSH6tc:QAvyLe;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aCJ9tf:qKftvc;aZ61od:arTwJ;af0EJf:ghinId;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:EtZ8Cd;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO,fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:O1Gjze,TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=cdos,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl-9 into controller test1
+2024-05-22 17:50:30,242 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?s=webhp&t=aft&atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&rt=wsrt.8,aft.3286,afti.3286,cbt.2993,hst.2993,prt.3156&imn=11&ima=1&imad=0&imac=1&wh=790&aft=1&aftp=790&opi=89978449-12 into controller test1
+2024-05-22 17:50:30,446 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&s=webhp&t=all&imn=11&ima=1&imad=0&imac=1&wh=790&aft=1&aftp=790&adh=&ime=1&imeae=0&imeap=0&imex=1&imeh=0&imeha=0&imehb=0&imea=0&imeb=0&imel=0&imed=0&scp=0&hp=&sys=hc.8&p=bs.true&rt=hst.2993,cbt.2993,prt.3156,afti.3286,aft.3286,aftqf.3287,xjses.3366,xjsee.3396,xjs.3396,lcp.3288,fcp.3171,wsrt.8,cst.0,dnst.0,rqst.2973,rspt.2971,sslt.0,rqstt.6,unt.0,cstt.6,dit.3170&zx=1716389430146&opi=89978449-13 into controller test1
+2024-05-22 17:50:30,450 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/complete/search-14 into controller test1
+2024-05-22 17:50:30,651 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/js/k=xjs.hd.en.-5YglXcrtOQ.O/ck=xjs.hd.cdwAfs1ZQDU.L.F4.O/am=AEYBAAAAAACAAQAAAAAAAAAAAAAAAAAEAEAAAAAAACmABsIBUJxsWA4AABAAAAAQBABgAABS8D4ACAEUkMAAgCFIggA8lA0ABDIBARFABJAEghwEACCSFQYgFQAYAAAAgAAJAAAABxDAAASyBwACHhIAACCgEwRgAQAQ2EAQAAACAAAAkAeA4AAYpDAAAAAAAAAAAAAAAAQwQTAXEhAQAQEAAAAAAAAAAAAAAEhJJxYm/d=1/exm=SNUn3,cEt90b,cdos,csi,d,dtl0hd,eHDfl,hsm,jsa,mb4ZUb,qddgKe,sTsDMc/ed=1/dg=0/ujg=1/rs=ACT90oH0UXl3jZwD-4eDZam5uinZgayVkA/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hezEbd;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KpRAue:Tia57b;LBgRLc:SdcwHb,XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZSH6tc:QAvyLe;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aCJ9tf:qKftvc;aZ61od:arTwJ;af0EJf:ghinId;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:EtZ8Cd;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:O1Gjze,TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=B2qlPe,DhPYme,GU4Gab,MpJwZc,NzU6V,UUJqVe,Wo3n8,aa,abd,async,epYOx,ms4mZb,mu,pHXghd,q0xTif,s39S4,sOXFj,sb_wiz,sf,spch-15 into controller test1
+2024-05-22 17:50:30,856 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=i&ei=NQZOZuvjIImN7NYP98K7iA4&dt19=2&zx=1716389430616&opi=89978449-17 into controller test1
+2024-05-22 17:50:30,860 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&s=promo&rt=hpbas.3869&zx=1716389430614&opi=89978449-19 into controller test1
+2024-05-22 17:50:30,864 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/async/hpba-18 into controller test1
+2024-05-22 17:50:30,869 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/js/k=xjs.hd.en.-5YglXcrtOQ.O/ck=xjs.hd.cdwAfs1ZQDU.L.F4.O/am=AEYBAAAAAACAAQAAAAAAAAAAAAAAAAAEAEAAAAAAACmABsIBUJxsWA4AABAAAAAQBABgAABS8D4ACAEUkMAAgCFIggA8lA0ABDIBARFABJAEghwEACCSFQYgFQAYAAAAgAAJAAAABxDAAASyBwACHhIAACCgEwRgAQAQ2EAQAAACAAAAkAeA4AAYpDAAAAAAAAAAAAAAAAQwQTAXEhAQAQEAAAAAAAAAAAAAAEhJJxYm/d=1/exm=B2qlPe,DhPYme,GU4Gab,MpJwZc,NzU6V,SNUn3,UUJqVe,Wo3n8,aa,abd,async,cEt90b,cdos,csi,d,dtl0hd,eHDfl,epYOx,hsm,jsa,mb4ZUb,ms4mZb,mu,pHXghd,q0xTif,qddgKe,s39S4,sOXFj,sTsDMc,sb_wiz,sf,spch/ed=1/dg=0/ujg=1/rs=ACT90oH0UXl3jZwD-4eDZam5uinZgayVkA/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hezEbd;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KpRAue:Tia57b;LBgRLc:SdcwHb,XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZSH6tc:QAvyLe;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aCJ9tf:qKftvc;aZ61od:arTwJ;af0EJf:ghinId;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:EtZ8Cd;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:O1Gjze,TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=CnSW2d,DPreE,P10Owf,WlNQGd,fXO0xe,gSZvdb,nabPbb-16 into controller test1
+2024-05-22 17:50:31,061 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&s=promo&rt=hpbas.3869,hpbarr.192&zx=1716389430806&opi=89978449-20 into controller test1
+2024-05-22 17:50:31,065 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=csi&ei=NgZOZov1L7SL7NYPh5unoAs&s=async&astyp=hpba&ima=0&imn=0&hp=&rt=ttfb.189,st.190,bs.27,aaft.190,acrt.191,art.191&zx=1716389430805&opi=89978449-21 into controller test1
+2024-05-22 17:50:31,264 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/js/k=xjs.hd.en.-5YglXcrtOQ.O/ck=xjs.hd.cdwAfs1ZQDU.L.F4.O/am=AEYBAAAAAACAAQAAAAAAAAAAAAAAAAAEAEAAAAAAACmABsIBUJxsWA4AABAAAAAQBABgAABS8D4ACAEUkMAAgCFIggA8lA0ABDIBARFABJAEghwEACCSFQYgFQAYAAAAgAAJAAAABxDAAASyBwACHhIAACCgEwRgAQAQ2EAQAAACAAAAkAeA4AAYpDAAAAAAAAAAAAAAAAQwQTAXEhAQAQEAAAAAAAAAAAAAAEhJJxYm/d=1/exm=B2qlPe,CnSW2d,DPreE,DhPYme,GU4Gab,MpJwZc,NzU6V,P10Owf,SNUn3,UUJqVe,WlNQGd,Wo3n8,aa,abd,async,cEt90b,cdos,csi,d,dtl0hd,eHDfl,epYOx,fXO0xe,gSZvdb,hsm,jsa,mb4ZUb,ms4mZb,mu,nabPbb,pHXghd,q0xTif,qddgKe,s39S4,sOXFj,sTsDMc,sb_wiz,sf,spch/ed=1/dg=0/ujg=1/rs=ACT90oH0UXl3jZwD-4eDZam5uinZgayVkA/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hezEbd;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KpRAue:Tia57b;LBgRLc:SdcwHb,XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZSH6tc:QAvyLe;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aCJ9tf:qKftvc;aZ61od:arTwJ;af0EJf:ghinId;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:EtZ8Cd;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:O1Gjze,TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=bm51tf-22 into controller test1
+2024-05-22 17:50:31,921 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=i&ei=NQZOZuvjIImN7NYP98K7iA4&ct=slh&v=t1&m=HV&pv=0.5563592613805676&me=1:1716389429901,V,0,0,1440,790:0,B,790:0,N,1,NQZOZuvjIImN7NYP98K7iA4:0,R,1,1,0,0,1440,790:716,x:1082,e,B&zx=1716389431700&opi=89978449-23 into controller test1
+2024-05-22 17:50:32,815 INFO o.a.j.p.h.p.ProxyControl: [65328]  Creating entry safebrowsing.googleapis.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:32,842 INFO o.a.j.p.h.p.Proxy: [65317]  KeyStore for SSL loaded OK and put host 'lh3.google.com' in map with key (lh3.google.com)
+2024-05-22 17:50:33,097 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/u/0/ogw/AF2bZyjjSbl9WxArVhS2q3Iden74wKqZ0VzuVIGqEbc3tO--sQ=s64-c-mo-24 into controller test1
+2024-05-22 17:50:35,589 INFO o.a.j.p.h.p.ProxyControl: [65324]  Creating entry www.gstatic.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:35,616 INFO o.a.j.p.h.p.Proxy: [65328]  KeyStore for SSL loaded OK and put host 'safebrowsing.googleapis.com' in map with key (safebrowsing.googleapis.com)
+2024-05-22 17:50:35,619 WARN o.a.j.p.h.p.Proxy: [65328]  Problem with SSL certificate for url  for 'safebrowsing.googleapis.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:50:39,684 INFO o.a.j.p.h.p.Proxy: [65324]  KeyStore for SSL loaded OK and put host 'www.gstatic.com' in map with key (www.gstatic.com)
+2024-05-22 17:50:39,883 INFO o.a.j.p.h.p.ProxyControl: [65356]  Creating entry lh3.googleusercontent.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:39,888 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/og/_/ss/k=og.qtm.-vQCaNdMeKQ.L.F4.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTuQ2Ixh_mqBZcJCM3HbgAKZFoNU2A-25 into controller test1
+2024-05-22 17:50:40,045 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/og/_/js/k=og.qtm.en_US.s-_8OiN4zAs.2019.O/rt=j/m=qabr,qgl,q_dnp,qcwid,qbd,qapid,qald,qrcd,q_dg,qrbg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTstZieUcIRJsHgW4g1D6WRCneCt9Q-26 into controller test1
+2024-05-22 17:50:40,049 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/client_204-27 into controller test1
+2024-05-22 17:50:40,093 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/xjs/_/js/md=3/k=xjs.hd.en.-5YglXcrtOQ.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACGAAgAAUBwAAAYAAAAAAAAQBABgAABC8D4ACAEEkMAAgCEIggA8lA0ABDABAAEABAAEAhAEAAASBAAAFAAAAAAAAAAAAAAABxCAAAAAAAAAAAAAAACgEwBAAAAQ2EAQAAACAAAAkAeA4AAYpDAAAAAAAAAAAAAAAAQwQTAXEhAQAQEAAAAAAAAAAAAAAEhJJxYm/rs=ACT90oEpRJPaLEF5ALY3Xv7sJ3lzWZ4XFg-28 into controller test1
+2024-05-22 17:50:42,603 INFO o.a.j.p.h.p.ProxyControl: [65363]  Creating entry play.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:42,636 INFO o.a.j.p.h.p.Proxy: [65356]  KeyStore for SSL loaded OK and put host 'lh3.googleusercontent.com' in map with key (lh3.googleusercontent.com)
+2024-05-22 17:50:43,103 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/fife/ALs6j_HbVV5gDgc7vezMtWlF7-BSO4WCLU2etAPqRW2aZMKTfJmTwhlYTdH6YWkaqy8D8UdWC6UW6yZSY2T8Nw8Ze1-SWV0R1yOOcdN7K2rPwB_hvYW-UHKPFuLcn-yLwSX_p1t7TLXy-rqFjaGE5rUdxw_-_opVlqzzUgdLWSM11IW2tH287-h9qVW5N13FYcpcppKydLfD4MD3m8aO1Pzd-dv8IdeXMPbx6waoDwBRY22VNX3EUDJYN-ACgsMhipRbpl-CgEZ2tVMxaFF772rQXUc3CDfWQDJaHeOujPn7ghefEnt624-Abq745nz0ZBUSjJ19v23CU9xV2Z0u0r9yD51PctoYZsDcp5cjbPUk8jE9mMlpSpwBJaiLDeG4fZARVGtwLEgCxRWOb-6deMJpvym-h2lqT1pn0CjODKmtHFExybB10HhKtFquTjf_OaG88cTHe6cdlrLnt7rRfvfogbfRQ-bwfF8BDjOemxRjpEXxE3OtWN0ciQHr0xfEp2Es6blnoB_cIwBUVppMF2LrhGOXUqfNE40EAcVASZFoulDyHVGCJ5prAdiWE2beq52SAzpCGNeDK1XDZqTHEODbs0S1uxgj_RleHyxsAnC8mfNqVMxU9llfQp4afgEgYek0uJfo-QSSpPA7wgiOjeFQNuzmnvfZHpcxK4QZ6JvhFViGTrE3Gx0ku-PNMDYMfm15iVViKDCfPMhrcTSDmSzyVeKJ4_91FVznuK6G4axr6sd0RG49mV1dXsRiOXIkUftGTCyKbu8zx-nUo21SMWMWgrcWknZ0uJNn4WTVM_wSsRhzt2THGFHzCh2DeITcDvKaBryzOsCtm_EL6NZJVHN-eBlSD0Ej3BkgHU1DaUzTN5R-uSy4Ka0jOEhZW7Ycu-rBlwD6TySV866XmOYAeSEnipd2VnO-TD5otIfz0OOT3geY_myDWYsSyI8o4Cmxye7fytrMI8aNNlbWLhkBT_q1smIhf3gh45gn7GAl0y8TWVussG2UQzorJXfQ1qrOD17SiOIn9CiNYHxmAZndi5zOKocsQ1ZTOE84_RC4C8gGvaaKXJoj_lA8waO0PpfpYQ0v26mRXVcKe7icm7VqNLv-3Oas26PDdZtOguFNLyCA-edGn3tqmniwMgDjI4ry0VwZk-4sPTWMc5TjcvwkJaHl6XNdGPtxlFN4_-aY2uZH9Q-7PjMPTdIVOV55_oYccoB1j0hx9hupjkQ-dhgs_spYb0i-Ka4I2o_InAtynvQYNBDy4iH3yLVb_NS5OVRwJKRGLT5dUtD-BIOOuYNtCp08juQjVsEf6DQ3qtG6b163LgJFmlbOsGD-raahH36Pc0TLzTnEH7JBJ0dLiSTSzyLIl9Ri48KVjzRfDzCWpNfJejcQaeW8Dp1f0XNM4FU=s64-c-29 into controller test1
+2024-05-22 17:50:44,922 INFO o.a.j.p.h.p.ProxyControl: [65361]  Creating entry waa-pa.clients6.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:44,958 INFO o.a.j.p.h.p.Proxy: [65363]  KeyStore for SSL loaded OK and put host 'play.google.com' in map with key (play.google.com)
+2024-05-22 17:50:45,188 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-30 into controller test1
+2024-05-22 17:50:45,393 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-31 into controller test1
+2024-05-22 17:50:47,608 INFO o.a.j.p.h.p.ProxyControl: [65359]  Creating entry apis.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:47,648 INFO o.a.j.p.h.p.Proxy: [65361]  KeyStore for SSL loaded OK and put host 'waa-pa.clients6.google.com' in map with key (waa-pa.clients6.google.com)
+2024-05-22 17:50:47,848 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/$rpc/google.internal.waa.v1.Waa/Create-32 into controller test1
+2024-05-22 17:50:48,053 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/$rpc/google.internal.waa.v1.Waa/Create-33 into controller test1
+2024-05-22 17:50:48,205 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/bg/WGg91BhL6Bhk3qTAPqmblqNZdzujbVjDoJfr3h8Q3EY.js-34 into controller test1
+2024-05-22 17:50:48,615 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/$rpc/google.internal.waa.v1.Waa/Ping-35 into controller test1
+2024-05-22 17:50:48,618 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-36 into controller test1
+2024-05-22 17:50:48,819 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/$rpc/google.internal.waa.v1.Waa/Ping-37 into controller test1
+2024-05-22 17:50:50,334 INFO o.a.j.p.h.p.Proxy: [65359]  KeyStore for SSL loaded OK and put host 'apis.google.com' in map with key (apis.google.com)
+2024-05-22 17:50:50,539 INFO o.a.j.p.h.p.ProxyControl: [65380]  Creating entry adservice.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:50,657 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/scs/abc-static/_/js/k=gapi.gapi.en.SCWmpDDGjPk.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo_Pl64J0IIHlj2zBtEJ3ZwdaJC3HA/cb=gapi.loaded_0-38 into controller test1
+2024-05-22 17:50:50,710 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204-39 into controller test1
+2024-05-22 17:50:53,575 INFO o.a.j.p.h.p.ProxyControl: [65382]  Creating entry ogs.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:53,618 INFO o.a.j.p.h.p.Proxy: [65380]  KeyStore for SSL loaded OK and put host 'adservice.google.com' in map with key (adservice.google.com)
+2024-05-22 17:50:53,927 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/adsid/google/ui-40 into controller test1
+2024-05-22 17:50:56,399 INFO o.a.j.p.h.p.ProxyControl: [65381]  Creating entry accounts.google.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:50:56,444 INFO o.a.j.p.h.p.Proxy: [65382]  KeyStore for SSL loaded OK and put host 'ogs.google.com' in map with key (ogs.google.com)
+2024-05-22 17:50:56,782 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/u/0/widget/app-41 into controller test1
+2024-05-22 17:50:56,983 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.NCTQ3dd03yA.es5.O/am=kMCgcwc/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/ujg=1/rs=AM-SdHsiq4DNK1l2wDUNLLrxPp_KKTWg2g/m=_b,_tp-42 into controller test1
+2024-05-22 17:50:57,188 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/a/ACg8ocKL9-yoO1tljx72Ivraa9ekNDkEpJ1HbuQv9YqGAtGZvvEV_A=s128-b16-cc-rp-mo-43 into controller test1
+2024-05-22 17:50:57,191 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.NCTQ3dd03yA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.dzal8g6uC9c.L.F4.O/am=kMCgcwc/d=1/exm=_b,_tp/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/ujg=1/rs=AM-SdHvCV8tSFOk_BYT9VCFuc_uKC78MgA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:QIhFr;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:GkRiKb/m=ws9Tlc,n73qwf,GkRiKb,e5qFLc,IZT63,UUJqVe,O1Gjze,byfTOb,lsjVmc,xUdipf,OTA3Ae,COQbmf,fKUV3e,aurFic,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,aDfbSd,lKZxSd,O6y8ed,PrPYRd,MpJwZc,LEikZe,NwH0H,OmgaI,lazG7b,XVMNvd,L1AAkb,KUM7Z,Mlhmy,s39S4,lwddkf,gychg,w9hDv,EEDORb,RMhBfe,SdcwHb,aW3pY,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,wmnU7d,xQtZb,JNoxi,kWgXee,MI6k7c,kjKdXe,BVgquf,QIhFr,ovKuLd,hKSk3e,yDVVkb,hc6Ubd,SpsfSb,KG2eXe,Z5uLle,MdUzUe,VwDzFe,zbML3c,A7fCU,zr1jrb,Uas9Hd,pjICDe-44 into controller test1
+2024-05-22 17:50:57,393 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.NCTQ3dd03yA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.dzal8g6uC9c.L.F4.O/am=kMCgcwc/d=1/exm=A7fCU,BVgquf,COQbmf,EEDORb,EFQ78c,GkRiKb,IZT63,JNoxi,KG2eXe,KUM7Z,L1AAkb,LEikZe,MI6k7c,MdUzUe,Mlhmy,MpJwZc,NwH0H,O1Gjze,O6y8ed,OTA3Ae,OmgaI,PrPYRd,QIhFr,RMhBfe,SdcwHb,SpsfSb,U0aPgd,UUJqVe,Uas9Hd,Ulmmrd,V3dDOb,VwDzFe,XVMNvd,Z5uLle,ZfAoz,ZwDk9d,_b,_tp,aDfbSd,aW3pY,aurFic,byfTOb,e5qFLc,fKUV3e,gychg,hKSk3e,hc6Ubd,kWgXee,kjKdXe,lKZxSd,lazG7b,lsjVmc,lwddkf,mI3LFb,mdR7q,n73qwf,ovKuLd,pjICDe,pw70Gc,s39S4,w9hDv,wmnU7d,ws9Tlc,xQtZb,xUdipf,yDVVkb,zbML3c,zr1jrb/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/ujg=1/rs=AM-SdHvCV8tSFOk_BYT9VCFuc_uKC78MgA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:QIhFr;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:GkRiKb/m=RqjULd-45 into controller test1
+2024-05-22 17:50:57,401 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.NCTQ3dd03yA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.dzal8g6uC9c.L.F4.O/am=kMCgcwc/d=1/exm=A7fCU,BVgquf,COQbmf,EEDORb,EFQ78c,GkRiKb,IZT63,JNoxi,KG2eXe,KUM7Z,L1AAkb,LEikZe,MI6k7c,MdUzUe,Mlhmy,MpJwZc,NwH0H,O1Gjze,O6y8ed,OTA3Ae,OmgaI,PrPYRd,QIhFr,RMhBfe,RqjULd,SdcwHb,SpsfSb,U0aPgd,UUJqVe,Uas9Hd,Ulmmrd,V3dDOb,VwDzFe,XVMNvd,Z5uLle,ZfAoz,ZwDk9d,_b,_tp,aDfbSd,aW3pY,aurFic,byfTOb,e5qFLc,fKUV3e,gychg,hKSk3e,hc6Ubd,kWgXee,kjKdXe,lKZxSd,lazG7b,lsjVmc,lwddkf,mI3LFb,mdR7q,n73qwf,ovKuLd,pjICDe,pw70Gc,s39S4,w9hDv,wmnU7d,ws9Tlc,xQtZb,xUdipf,yDVVkb,zbML3c,zr1jrb/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/ujg=1/rs=AM-SdHvCV8tSFOk_BYT9VCFuc_uKC78MgA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:QIhFr;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:GkRiKb/m=bm51tf-46 into controller test1
+2024-05-22 17:50:57,593 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.NCTQ3dd03yA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.dzal8g6uC9c.L.F4.O/am=kMCgcwc/d=1/exm=A7fCU,BVgquf,COQbmf,EEDORb,EFQ78c,GkRiKb,IZT63,JNoxi,KG2eXe,KUM7Z,L1AAkb,LEikZe,MI6k7c,MdUzUe,Mlhmy,MpJwZc,NwH0H,O1Gjze,O6y8ed,OTA3Ae,OmgaI,PrPYRd,QIhFr,RMhBfe,RqjULd,SdcwHb,SpsfSb,U0aPgd,UUJqVe,Uas9Hd,Ulmmrd,V3dDOb,VwDzFe,XVMNvd,Z5uLle,ZfAoz,ZwDk9d,_b,_tp,aDfbSd,aW3pY,aurFic,bm51tf,byfTOb,e5qFLc,fKUV3e,gychg,hKSk3e,hc6Ubd,kWgXee,kjKdXe,lKZxSd,lazG7b,lsjVmc,lwddkf,mI3LFb,mdR7q,n73qwf,ovKuLd,pjICDe,pw70Gc,s39S4,w9hDv,wmnU7d,ws9Tlc,xQtZb,xUdipf,yDVVkb,zbML3c,zr1jrb/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/ujg=1/rs=AM-SdHvCV8tSFOk_BYT9VCFuc_uKC78MgA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:QIhFr;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:GkRiKb/m=Wt6vjf,hhhU8,FCpbqb,WhJNk-47 into controller test1
+2024-05-22 17:50:59,040 INFO o.a.j.p.h.p.Proxy: [65381]  KeyStore for SSL loaded OK and put host 'accounts.google.com' in map with key (accounts.google.com)
+2024-05-22 17:50:59,429 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/RotateCookiesPage-48 into controller test1
+2024-05-22 17:50:59,431 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/_/mss/boq-identity/_/js/k=boq-identity.IdentityRotateCookiesHttp.en_US.0g4Kfkd0KIU.es5.O/am=BgM/d=1/rs=AOaEmlEeTsTchiLWHawcB75TmEav3Cfjdg/m=hfcr-49 into controller test1
+2024-05-22 17:51:00,653 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/RotateCookies-50 into controller test1
+2024-05-22 17:51:04,779 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=i&ei=NQZOZuvjIImN7NYP98K7iA4&ct=slh&v=t1&im=M&pv=0.5563592613805676&me=7:1716389431700,V,0,0,0,0:18840,V,0,0,1440,790:13586,h,1,1,i:217,h,1,1,o:209,e,B&zx=1716389464553&opi=89978449-51 into controller test1
+2024-05-22 17:51:18,398 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-52 into controller test1
+2024-05-22 17:51:21,107 WARN o.a.j.p.h.p.Proxy: [65419]  Problem with SSL certificate for url  for 'ac.duckduckgo.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2024-05-22 17:51:21,248 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-53 into controller test1
+2024-05-22 17:51:21,449 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-54 into controller test1
+2024-05-22 17:51:21,495 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-55 into controller test1
+2024-05-22 17:51:21,654 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-56 into controller test1
+2024-05-22 17:51:22,472 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-57 into controller test1
+2024-05-22 17:51:23,288 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-58 into controller test1
+2024-05-22 17:51:24,100 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-59 into controller test1
+2024-05-22 17:51:24,106 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-60 into controller test1
+2024-05-22 17:51:24,303 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ac/-61 into controller test1
+2024-05-22 17:51:24,508 INFO o.a.j.p.h.p.ProxyControl: [65436]  Creating entry demoblaze.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:51:25,326 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-62 into controller test1
+2024-05-22 17:51:25,328 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=csi&ei=NQZOZuvjIImN7NYP98K7iA4&s=webhp&nt=navigate&t=fi&st=58368&fid=2&zx=1716389485159&opi=89978449-63 into controller test1
+2024-05-22 17:51:26,146 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=i&ei=NQZOZuvjIImN7NYP98K7iA4&ct=slh&v=t1&im=M&pv=0.5563592613805676&me=12:1716389464553,V,0,0,0,0:8851,h,1,1,i:375,h,1,1,o:10808,V,0,0,1440,790:1197,e,B&zx=1716389485785&opi=89978449-64 into controller test1
+2024-05-22 17:51:27,390 INFO o.a.j.p.h.p.Proxy: [65436]  KeyStore for SSL loaded OK and put host 'demoblaze.com' in map with key (demoblaze.com)
+2024-05-22 17:51:27,577 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-65 into controller test1
+2024-05-22 17:51:27,791 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/log?format=json&hasfast=true&authuser=0-67 into controller test1
+2024-05-22 17:51:27,798 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/-66 into controller test1
+2024-05-22 17:51:27,994 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/gen_204?atyp=i&ei=NQZOZuvjIImN7NYP98K7iA4&ct=slh&v=t1&im=M&pv=0.5563592613805676&me=17:1716389485786,V,0,0,0,0:1946,e,H&zx=1716389487740&opi=89978449-68 into controller test1
+2024-05-22 17:51:28,199 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-72 into controller test1
+2024-05-22 17:51:28,201 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-71 into controller test1
+2024-05-22 17:51:28,203 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-70 into controller test1
+2024-05-22 17:51:28,205 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-74 into controller test1
+2024-05-22 17:51:28,206 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-69 into controller test1
+2024-05-22 17:51:28,207 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-73 into controller test1
+2024-05-22 17:51:28,404 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-75 into controller test1
+2024-05-22 17:51:28,406 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-76 into controller test1
+2024-05-22 17:51:28,407 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-79 into controller test1
+2024-05-22 17:51:28,409 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-78 into controller test1
+2024-05-22 17:51:28,410 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-77 into controller test1
+2024-05-22 17:51:28,411 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-80 into controller test1
+2024-05-22 17:51:28,608 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-81 into controller test1
+2024-05-22 17:51:28,610 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-84 into controller test1
+2024-05-22 17:51:28,611 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-83 into controller test1
+2024-05-22 17:51:28,612 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/fonts/Lato-Regular.woff2-82 into controller test1
+2024-05-22 17:51:28,724 INFO o.a.j.p.h.p.ProxyControl: [65484]  Creating entry api.demoblaze.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:51:28,809 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-85 into controller test1
+2024-05-22 17:51:31,932 INFO o.a.j.p.h.p.ProxyControl: [65486]  Creating entry hls.demoblaze.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:51:31,984 INFO o.a.j.p.h.p.Proxy: [65484]  KeyStore for SSL loaded OK and put host 'api.demoblaze.com' in map with key (api.demoblaze.com)
+2024-05-22 17:51:32,485 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-86 into controller test1
+2024-05-22 17:51:32,690 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-87 into controller test1
+2024-05-22 17:51:34,901 INFO o.a.j.p.h.p.Proxy: [65486]  KeyStore for SSL loaded OK and put host 'hls.demoblaze.com' in map with key (hls.demoblaze.com)
+2024-05-22 17:51:35,348 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.m3u8-88 into controller test1
+2024-05-22 17:51:35,352 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-89 into controller test1
+2024-05-22 17:51:35,354 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/about_demo_hls_600k.m3u8-90 into controller test1
+2024-05-22 17:51:35,553 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/about_demo_hls_600k00000.ts-97 into controller test1
+2024-05-22 17:51:35,558 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-94 into controller test1
+2024-05-22 17:51:35,561 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-92 into controller test1
+2024-05-22 17:51:35,564 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-91 into controller test1
+2024-05-22 17:51:35,567 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-96 into controller test1
+2024-05-22 17:51:35,570 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-95 into controller test1
+2024-05-22 17:51:35,573 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-93 into controller test1
+2024-05-22 17:51:35,755 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-98 into controller test1
+2024-05-22 17:52:49,175 INFO o.a.j.p.h.p.Proxy: [65512]  KeyStore for SSL loaded OK and put host 'spocs.getpocket.com' in map with key (spocs.getpocket.com)
+2024-05-22 17:52:49,719 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/spocs-99 into controller test1
+2024-05-22 17:54:47,251 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.html-100 into controller test1
+2024-05-22 17:54:47,656 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-105 into controller test1
+2024-05-22 17:54:47,658 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-104 into controller test1
+2024-05-22 17:54:47,660 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-101 into controller test1
+2024-05-22 17:54:47,661 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-102 into controller test1
+2024-05-22 17:54:47,663 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-103 into controller test1
+2024-05-22 17:54:47,664 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-106 into controller test1
+2024-05-22 17:54:47,857 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-109 into controller test1
+2024-05-22 17:54:47,860 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-110 into controller test1
+2024-05-22 17:54:47,863 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-108 into controller test1
+2024-05-22 17:54:47,864 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-107 into controller test1
+2024-05-22 17:54:48,062 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-115 into controller test1
+2024-05-22 17:54:48,267 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-113 into controller test1
+2024-05-22 17:54:48,269 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-112 into controller test1
+2024-05-22 17:54:48,271 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-114 into controller test1
+2024-05-22 17:54:48,272 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-111 into controller test1
+2024-05-22 17:54:48,273 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-116 into controller test1
+2024-05-22 17:54:48,472 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-117 into controller test1
+2024-05-22 17:54:48,678 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-120 into controller test1
+2024-05-22 17:54:48,680 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-118 into controller test1
+2024-05-22 17:54:48,683 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-123 into controller test1
+2024-05-22 17:54:48,687 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-119 into controller test1
+2024-05-22 17:54:48,689 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-122 into controller test1
+2024-05-22 17:54:48,692 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-121 into controller test1
+2024-05-22 17:54:49,084 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-124 into controller test1
+2024-05-22 17:55:42,416 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/v4/threatListUpdates:fetch-125 into controller test1
+2024-05-22 17:56:56,692 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/signup-126 into controller test1
+2024-05-22 17:56:56,894 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/signup-127 into controller test1
+2024-05-22 17:57:28,851 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/login-128 into controller test1
+2024-05-22 17:57:29,056 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/login-129 into controller test1
+2024-05-22 17:57:29,467 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.html-130 into controller test1
+2024-05-22 17:57:29,672 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-133 into controller test1
+2024-05-22 17:57:29,673 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-134 into controller test1
+2024-05-22 17:57:29,675 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-132 into controller test1
+2024-05-22 17:57:29,676 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-135 into controller test1
+2024-05-22 17:57:29,678 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-136 into controller test1
+2024-05-22 17:57:29,679 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-131 into controller test1
+2024-05-22 17:57:29,876 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-138 into controller test1
+2024-05-22 17:57:29,878 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-137 into controller test1
+2024-05-22 17:57:29,880 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-139 into controller test1
+2024-05-22 17:57:29,881 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-142 into controller test1
+2024-05-22 17:57:29,882 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-140 into controller test1
+2024-05-22 17:57:29,883 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-141 into controller test1
+2024-05-22 17:57:30,082 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-143 into controller test1
+2024-05-22 17:57:30,086 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-145 into controller test1
+2024-05-22 17:57:30,090 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-144 into controller test1
+2024-05-22 17:57:30,091 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-146 into controller test1
+2024-05-22 17:57:30,489 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-147 into controller test1
+2024-05-22 17:57:30,491 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-148 into controller test1
+2024-05-22 17:57:30,495 INFO o.a.j.p.h.p.ProxyControl: [49262]  Creating entry shavar.services.mozilla.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:57:30,694 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-149 into controller test1
+2024-05-22 17:57:30,698 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-152 into controller test1
+2024-05-22 17:57:30,700 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-153 into controller test1
+2024-05-22 17:57:30,702 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-154 into controller test1
+2024-05-22 17:57:30,704 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-150 into controller test1
+2024-05-22 17:57:30,706 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-155 into controller test1
+2024-05-22 17:57:30,707 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-151 into controller test1
+2024-05-22 17:57:30,898 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-156 into controller test1
+2024-05-22 17:57:33,294 INFO o.a.j.p.h.p.Proxy: [49262]  KeyStore for SSL loaded OK and put host 'shavar.services.mozilla.com' in map with key (shavar.services.mozilla.com)
+2024-05-22 17:57:34,330 INFO o.a.j.p.h.p.ProxyControl: [49267]  Creating entry tracking-protection.cdn.mozilla.net in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:57:34,376 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/downloads?client=navclient-auto-ffox&appver=125.0&pver=2.2-157 into controller test1
+2024-05-22 17:57:36,857 INFO o.a.j.p.h.p.Proxy: [49267]  KeyStore for SSL loaded OK and put host 'tracking-protection.cdn.mozilla.net' in map with key (tracking-protection.cdn.mozilla.net)
+2024-05-22 17:57:37,246 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/content-track-digest256/1715683902-158 into controller test1
+2024-05-22 17:57:37,449 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/ads-track-digest256/1715683902-159 into controller test1
+2024-05-22 17:57:37,451 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/analytics-track-digest256/1715683902-160 into controller test1
+2024-05-22 17:57:37,654 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/social-track-digest256/1715935915-161 into controller test1
+2024-05-22 17:57:37,859 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/mozstd-trackwhite-digest256/1715935915-162 into controller test1
+2024-05-22 17:57:38,064 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/base-fingerprinting-track-digest256/1715683902-163 into controller test1
+2024-05-22 17:57:38,066 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/social-tracking-protection-twitter-digest256/1715935915-164 into controller test1
+2024-05-22 17:57:38,474 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/google-trackwhite-digest256/1715683902-165 into controller test1
+2024-05-22 17:57:40,310 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/prod.html-166 into controller test1
+2024-05-22 17:57:40,513 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-169 into controller test1
+2024-05-22 17:57:40,518 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-172 into controller test1
+2024-05-22 17:57:40,521 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-170 into controller test1
+2024-05-22 17:57:40,524 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-167 into controller test1
+2024-05-22 17:57:40,527 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-171 into controller test1
+2024-05-22 17:57:40,529 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-168 into controller test1
+2024-05-22 17:57:40,719 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-175 into controller test1
+2024-05-22 17:57:40,724 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-174 into controller test1
+2024-05-22 17:57:40,728 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-173 into controller test1
+2024-05-22 17:57:40,731 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/prod.js-177 into controller test1
+2024-05-22 17:57:40,734 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-176 into controller test1
+2024-05-22 17:57:41,125 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-178 into controller test1
+2024-05-22 17:57:41,330 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-179 into controller test1
+2024-05-22 17:57:41,335 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/view-180 into controller test1
+2024-05-22 17:57:41,535 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/view-182 into controller test1
+2024-05-22 17:57:41,538 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-181 into controller test1
+2024-05-22 17:57:41,740 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-183 into controller test1
+2024-05-22 17:57:43,370 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/addtocart-184 into controller test1
+2024-05-22 17:57:43,777 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/addtocart-185 into controller test1
+2024-05-22 17:57:49,122 INFO o.a.j.p.h.p.ProxyControl: [49325]  Creating entry contile.services.mozilla.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 17:57:51,721 INFO o.a.j.p.h.p.Proxy: [49325]  KeyStore for SSL loaded OK and put host 'contile.services.mozilla.com' in map with key (contile.services.mozilla.com)
+2024-05-22 17:57:52,126 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/v1/tiles-186 into controller test1
+2024-05-22 17:57:58,616 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/cart.html-187 into controller test1
+2024-05-22 17:57:59,025 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-189 into controller test1
+2024-05-22 17:57:59,029 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-192 into controller test1
+2024-05-22 17:57:59,032 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-190 into controller test1
+2024-05-22 17:57:59,035 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-191 into controller test1
+2024-05-22 17:57:59,038 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-193 into controller test1
+2024-05-22 17:57:59,041 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-188 into controller test1
+2024-05-22 17:57:59,226 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-196 into controller test1
+2024-05-22 17:57:59,228 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-195 into controller test1
+2024-05-22 17:57:59,230 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-194 into controller test1
+2024-05-22 17:57:59,232 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/cart.js-198 into controller test1
+2024-05-22 17:57:59,233 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js-199 into controller test1
+2024-05-22 17:57:59,234 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap-sweetalert/dist/sweetalert.css-197 into controller test1
+2024-05-22 17:57:59,431 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-200 into controller test1
+2024-05-22 17:57:59,434 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-201 into controller test1
+2024-05-22 17:57:59,841 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-202 into controller test1
+2024-05-22 17:57:59,850 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/viewcart-203 into controller test1
+2024-05-22 17:58:00,043 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-204 into controller test1
+2024-05-22 17:58:00,248 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/viewcart-205 into controller test1
+2024-05-22 17:58:00,453 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/view-206 into controller test1
+2024-05-22 17:58:00,658 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/view-207 into controller test1
+2024-05-22 17:58:00,860 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-208 into controller test1
+2024-05-22 17:58:23,843 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/deletecart-209 into controller test1
+2024-05-22 17:58:24,252 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/deletecart-210 into controller test1
+2024-05-22 17:58:26,089 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.html-211 into controller test1
+2024-05-22 17:58:26,294 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-212 into controller test1
+2024-05-22 17:58:26,297 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-213 into controller test1
+2024-05-22 17:58:26,299 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-216 into controller test1
+2024-05-22 17:58:26,302 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-214 into controller test1
+2024-05-22 17:58:26,304 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-217 into controller test1
+2024-05-22 17:58:26,306 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-215 into controller test1
+2024-05-22 17:58:26,499 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-218 into controller test1
+2024-05-22 17:58:26,502 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-219 into controller test1
+2024-05-22 17:58:26,503 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-220 into controller test1
+2024-05-22 17:58:26,504 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-222 into controller test1
+2024-05-22 17:58:26,506 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-221 into controller test1
+2024-05-22 17:58:26,507 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-223 into controller test1
+2024-05-22 17:58:26,700 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-224 into controller test1
+2024-05-22 17:58:26,704 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-225 into controller test1
+2024-05-22 17:58:26,707 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-226 into controller test1
+2024-05-22 17:58:26,710 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-227 into controller test1
+2024-05-22 17:58:27,104 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-228 into controller test1
+2024-05-22 17:58:27,107 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-229 into controller test1
+2024-05-22 17:58:27,309 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-235 into controller test1
+2024-05-22 17:58:27,314 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-232 into controller test1
+2024-05-22 17:58:27,317 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-230 into controller test1
+2024-05-22 17:58:27,323 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-231 into controller test1
+2024-05-22 17:58:27,514 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-233 into controller test1
+2024-05-22 17:58:27,520 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-236 into controller test1
+2024-05-22 17:58:27,525 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-234 into controller test1
+2024-05-22 17:58:27,530 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-237 into controller test1
+2024-05-22 17:58:35,200 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:03:14,410 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:03:14,410 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:03:14,410 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:03:14,411 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:03:23,422 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:03:46,030 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:03:46,030 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:03:46,030 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:03:46,031 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:03:50,264 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.html-238 into controller test1
+2024-05-22 18:03:50,469 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-241 into controller test1
+2024-05-22 18:03:50,481 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-243 into controller test1
+2024-05-22 18:03:50,527 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-242 into controller test1
+2024-05-22 18:03:50,530 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-244 into controller test1
+2024-05-22 18:03:50,533 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-240 into controller test1
+2024-05-22 18:03:50,537 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-239 into controller test1
+2024-05-22 18:03:50,727 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-245 into controller test1
+2024-05-22 18:03:50,735 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-246 into controller test1
+2024-05-22 18:03:50,740 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-248 into controller test1
+2024-05-22 18:03:50,752 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-247 into controller test1
+2024-05-22 18:03:51,084 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-252 into controller test1
+2024-05-22 18:03:51,087 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-249 into controller test1
+2024-05-22 18:03:51,089 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-253 into controller test1
+2024-05-22 18:03:51,092 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-251 into controller test1
+2024-05-22 18:03:51,094 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-254 into controller test1
+2024-05-22 18:03:51,102 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-250 into controller test1
+2024-05-22 18:03:51,337 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-255 into controller test1
+2024-05-22 18:03:51,541 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-258 into controller test1
+2024-05-22 18:03:51,549 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-256 into controller test1
+2024-05-22 18:03:51,555 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-259 into controller test1
+2024-05-22 18:03:51,561 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-257 into controller test1
+2024-05-22 18:03:51,567 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-261 into controller test1
+2024-05-22 18:03:51,571 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-260 into controller test1
+2024-05-22 18:03:51,905 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-262 into controller test1
+2024-05-22 18:04:15,738 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/signup-263 into controller test1
+2024-05-22 18:04:16,351 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/signup-264 into controller test1
+2024-05-22 18:04:21,256 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:15:02,224 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:15:02,224 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:15:02,230 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:15:02,279 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:15:02,280 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:15:02,280 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:15:02,280 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:15:02,282 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:15:02,282 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:15:02,284 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:15:08,459 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:15:08,459 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:15:08,460 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:15:08,464 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:16:07,273 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:16:07,273 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:16:07,274 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:16:07,316 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:16:07,317 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:16:07,317 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:16:07,317 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:16:07,318 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:16:07,318 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:16:07,318 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:16:12,273 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:16:12,273 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:16:12,274 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:16:12,274 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:17:40,236 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:17:40,236 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:17:40,236 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:17:40,237 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:18:13,193 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/login-265 into controller test1
+2024-05-22 18:18:13,474 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/login-266 into controller test1
+2024-05-22 18:18:13,799 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/index.html-267 into controller test1
+2024-05-22 18:18:14,005 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latostyle.css-273 into controller test1
+2024-05-22 18:18:14,008 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video.min.js-271 into controller test1
+2024-05-22 18:18:14,013 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/video.js/dist/video-js.min.css-269 into controller test1
+2024-05-22 18:18:14,016 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/jquery/dist/jquery.min.js-272 into controller test1
+2024-05-22 18:18:14,020 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/css/latofonts.css-268 into controller test1
+2024-05-22 18:18:14,085 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/css/bootstrap.min.css-270 into controller test1
+2024-05-22 18:18:14,207 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/tether/dist/js/tether.min.js-275 into controller test1
+2024-05-22 18:18:14,290 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/js/index.js-277 into controller test1
+2024-05-22 18:18:14,292 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/bootstrap/dist/js/bootstrap.min.js-276 into controller test1
+2024-05-22 18:18:14,295 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-274 into controller test1
+2024-05-22 18:18:14,298 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/nexus1.jpg-278 into controller test1
+2024-05-22 18:18:14,300 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/Samsung1.jpg-279 into controller test1
+2024-05-22 18:18:14,495 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/iphone1.jpg-280 into controller test1
+2024-05-22 18:18:14,497 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/bm.png-282 into controller test1
+2024-05-22 18:18:14,500 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/front.jpg-281 into controller test1
+2024-05-22 18:18:14,505 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/config.json-283 into controller test1
+2024-05-22 18:18:14,822 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/about_demo_hls_600k.m3u8-286 into controller test1
+2024-05-22 18:18:14,825 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-285 into controller test1
+2024-05-22 18:18:14,905 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/entries-284 into controller test1
+2024-05-22 18:18:15,024 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/check-287 into controller test1
+2024-05-22 18:18:15,110 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Nexus_6.jpg-289 into controller test1
+2024-05-22 18:18:15,115 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/HTC_M9.jpg-293 into controller test1
+2024-05-22 18:18:15,117 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/galaxy_s6.jpg-290 into controller test1
+2024-05-22 18:18:15,119 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/Lumia_1520.jpg-288 into controller test1
+2024-05-22 18:18:15,122 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/iphone_6.jpg-291 into controller test1
+2024-05-22 18:18:15,125 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/xperia_z5.jpg-292 into controller test1
+2024-05-22 18:18:15,315 INFO o.a.j.p.h.p.ProxyControl: Add sample test1/imgs/sony_vaio_5.jpg-294 into controller test1
+2024-05-22 18:18:20,086 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:19:46,469 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:19:46,470 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:19:46,472 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:19:46,522 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:19:46,523 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:19:46,523 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:19:46,523 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:19:46,524 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:19:46,524 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:19:46,525 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:19:56,887 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:19:56,887 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:19:56,888 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:19:56,888 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:24:08,524 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:24:08,525 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:24:08,525 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:24:08,526 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:24:30,710 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/prod.html-295 into controller test3
+2024-05-22 18:24:30,913 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/video.js/dist/video.min.js-301 into controller test3
+2024-05-22 18:24:30,917 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/css/latostyle.css-296 into controller test3
+2024-05-22 18:24:30,920 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/video.js/dist/video-js.min.css-299 into controller test3
+2024-05-22 18:24:30,924 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/jquery/dist/jquery.min.js-300 into controller test3
+2024-05-22 18:24:30,927 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/css/latofonts.css-298 into controller test3
+2024-05-22 18:24:30,930 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap/dist/css/bootstrap.min.css-297 into controller test3
+2024-05-22 18:24:31,115 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-302 into controller test3
+2024-05-22 18:24:31,118 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap/dist/js/bootstrap.min.js-303 into controller test3
+2024-05-22 18:24:31,121 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/tether/dist/js/tether.min.js-304 into controller test3
+2024-05-22 18:24:31,124 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/js/prod.js-305 into controller test3
+2024-05-22 18:24:31,322 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/bm.png-306 into controller test3
+2024-05-22 18:24:31,327 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/imgs/front.jpg-307 into controller test3
+2024-05-22 18:24:31,517 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/config.json-308 into controller test3
+2024-05-22 18:24:31,927 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/check-309 into controller test3
+2024-05-22 18:24:31,931 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/view-310 into controller test3
+2024-05-22 18:24:32,130 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/check-311 into controller test3
+2024-05-22 18:24:32,143 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/view-312 into controller test3
+2024-05-22 18:24:32,333 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/imgs/galaxy_s6.jpg-313 into controller test3
+2024-05-22 18:24:34,566 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/addtocart-314 into controller test3
+2024-05-22 18:24:34,977 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/addtocart-315 into controller test3
+2024-05-22 18:24:58,272 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:27:29,382 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:27:29,383 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:27:29,387 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:27:29,435 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:27:29,435 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:27:29,435 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:27:29,435 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:27:29,437 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:27:29,437 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:27:29,438 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:27:42,402 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:27:42,403 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:27:42,405 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:27:42,406 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:28:12,761 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:28:12,762 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:28:12,762 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:28:12,762 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:28:17,831 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/cart.html-316 into controller test3
+2024-05-22 18:28:18,036 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/css/latostyle.css-320 into controller test3
+2024-05-22 18:28:18,038 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/video.js/dist/video-js.min.css-318 into controller test3
+2024-05-22 18:28:18,041 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/video.js/dist/video.min.js-322 into controller test3
+2024-05-22 18:28:18,044 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/css/latofonts.css-319 into controller test3
+2024-05-22 18:28:18,047 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/jquery/dist/jquery.min.js-321 into controller test3
+2024-05-22 18:28:18,050 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap/dist/css/bootstrap.min.css-317 into controller test3
+2024-05-22 18:28:18,241 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-323 into controller test3
+2024-05-22 18:28:18,248 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap/dist/js/bootstrap.min.js-325 into controller test3
+2024-05-22 18:28:18,252 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/tether/dist/js/tether.min.js-324 into controller test3
+2024-05-22 18:28:18,256 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap-sweetalert/dist/sweetalert.css-326 into controller test3
+2024-05-22 18:28:18,446 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js-327 into controller test3
+2024-05-22 18:28:18,451 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/js/cart.js-328 into controller test3
+2024-05-22 18:28:18,651 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/imgs/front.jpg-329 into controller test3
+2024-05-22 18:28:18,655 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/bm.png-330 into controller test3
+2024-05-22 18:28:18,659 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/config.json-331 into controller test3
+2024-05-22 18:28:18,856 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/viewcart-332 into controller test3
+2024-05-22 18:28:18,861 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/check-333 into controller test3
+2024-05-22 18:28:19,061 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/viewcart-334 into controller test3
+2024-05-22 18:28:19,266 INFO o.a.j.p.h.p.ProxyControl: Add sample test3/check-335 into controller test3
+2024-05-22 18:28:29,836 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:35:24,290 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:35:24,290 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:35:24,293 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:35:24,345 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:35:24,345 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:35:24,345 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:35:24,345 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:35:24,346 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:35:24,346 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:35:24,347 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:35:38,388 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:35:38,388 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:35:38,389 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:35:38,390 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:35:55,424 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:35:55,424 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:35:55,427 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:35:55,472 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:35:55,473 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:35:55,473 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:35:55,473 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:35:55,474 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:35:55,474 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:35:55,475 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:36:08,028 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:36:08,028 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:36:08,029 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:36:08,029 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:41:13,857 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:41:13,858 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:41:13,860 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:41:13,905 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:41:13,905 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:41:13,906 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:41:13,906 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:41:13,907 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:41:13,907 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:41:13,908 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:41:25,948 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:41:25,948 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:41:25,951 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:41:25,952 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:43:42,884 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:43:42,885 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:43:42,887 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:43:42,938 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:43:42,938 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:43:42,938 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:43:42,939 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:43:42,940 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:43:42,940 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:43:42,940 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:43:56,453 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:43:56,453 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:43:56,455 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:43:56,455 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:44:43,731 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:44:43,731 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:44:43,733 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:44:43,783 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:44:43,784 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:44:43,784 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:44:43,784 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:44:43,785 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:44:43,785 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:44:43,786 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:44:58,046 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:44:58,046 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:44:58,048 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:44:58,048 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:46:37,008 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:46:37,008 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:46:37,010 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:46:37,057 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:46:37,057 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:46:37,057 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:46:37,057 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:46:37,058 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:46:37,058 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:46:37,059 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:46:50,402 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:46:50,403 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:46:50,405 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:46:50,405 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:47:30,111 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :root_ca:
+2024-05-22 18:47:30,112 INFO o.a.j.p.h.p.ProxyControl: Valid alias found for :intermediate_ca:
+2024-05-22 18:47:30,112 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 8080
+2024-05-22 18:47:30,112 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2024-05-22 18:47:35,882 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/index.html-336 into controller test4
+2024-05-22 18:47:35,911 INFO o.a.j.p.h.p.ProxyControl: [50161]  Creating entry firefox.settings.services.mozilla.com in /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2024-05-22 18:47:36,211 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video-js.min.css-337 into controller test4
+2024-05-22 18:47:36,215 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latofonts.css-339 into controller test4
+2024-05-22 18:47:36,218 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latostyle.css-340 into controller test4
+2024-05-22 18:47:36,221 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/jquery/dist/jquery.min.js-341 into controller test4
+2024-05-22 18:47:36,224 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video.min.js-342 into controller test4
+2024-05-22 18:47:36,227 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/css/bootstrap.min.css-338 into controller test4
+2024-05-22 18:47:36,231 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-344 into controller test4
+2024-05-22 18:47:36,291 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/js/bootstrap.min.js-345 into controller test4
+2024-05-22 18:47:36,295 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/Samsung1.jpg-348 into controller test4
+2024-05-22 18:47:36,412 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/js/index.js-346 into controller test4
+2024-05-22 18:47:36,418 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/tether/dist/js/tether.min.js-343 into controller test4
+2024-05-22 18:47:36,496 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/nexus1.jpg-349 into controller test4
+2024-05-22 18:47:36,504 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/iphone1.jpg-347 into controller test4
+2024-05-22 18:47:36,508 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/front.jpg-350 into controller test4
+2024-05-22 18:47:36,515 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/bm.png-351 into controller test4
+2024-05-22 18:47:36,701 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/config.json-352 into controller test4
+2024-05-22 18:47:36,821 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/about_demo_hls_600k00000.ts-355 into controller test4
+2024-05-22 18:47:36,910 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-353 into controller test4
+2024-05-22 18:47:36,921 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/entries-354 into controller test4
+2024-05-22 18:47:37,026 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/Lumia_1520.jpg-358 into controller test4
+2024-05-22 18:47:37,232 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/iphone_6.jpg-360 into controller test4
+2024-05-22 18:47:37,236 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/HTC_M9.jpg-362 into controller test4
+2024-05-22 18:47:37,240 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/xperia_z5.jpg-361 into controller test4
+2024-05-22 18:47:37,245 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/galaxy_s6.jpg-357 into controller test4
+2024-05-22 18:47:37,252 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-356 into controller test4
+2024-05-22 18:47:37,257 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/Nexus_6.jpg-359 into controller test4
+2024-05-22 18:47:37,262 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/sony_vaio_5.jpg-363 into controller test4
+2024-05-22 18:47:40,728 INFO o.a.j.p.h.p.Proxy: [50161]  KeyStore for SSL loaded OK and put host 'firefox.settings.services.mozilla.com' in map with key (firefox.settings.services.mozilla.com)
+2024-05-22 18:47:41,113 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/v1/buckets/main/collections/ms-language-packs/records/cfr-v1-en-US-364 into controller test4
+2024-05-22 18:47:46,494 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/prod.html-365 into controller test4
+2024-05-22 18:47:46,699 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/tether/dist/js/tether.min.js-370 into controller test4
+2024-05-22 18:47:46,704 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/jquery/dist/jquery.min.js-366 into controller test4
+2024-05-22 18:47:46,707 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/js/bootstrap.min.js-369 into controller test4
+2024-05-22 18:47:46,711 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-368 into controller test4
+2024-05-22 18:47:46,817 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video.min.js-367 into controller test4
+2024-05-22 18:47:46,820 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/css/bootstrap.min.css-371 into controller test4
+2024-05-22 18:47:47,017 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latofonts.css-373 into controller test4
+2024-05-22 18:47:47,020 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latostyle.css-374 into controller test4
+2024-05-22 18:47:47,023 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video-js.min.css-372 into controller test4
+2024-05-22 18:47:47,025 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/js/prod.js-375 into controller test4
+2024-05-22 18:47:47,218 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/bm.png-376 into controller test4
+2024-05-22 18:47:47,222 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/config.json-377 into controller test4
+2024-05-22 18:47:47,512 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/view-379 into controller test4
+2024-05-22 18:47:47,517 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-378 into controller test4
+2024-05-22 18:47:47,717 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/view-380 into controller test4
+2024-05-22 18:47:47,727 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-381 into controller test4
+2024-05-22 18:47:48,024 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/galaxy_s6.jpg-382 into controller test4
+2024-05-22 18:47:49,643 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/addtocart-383 into controller test4
+2024-05-22 18:47:49,845 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/addtocart-384 into controller test4
+2024-05-22 18:47:53,511 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/cart.html-385 into controller test4
+2024-05-22 18:47:53,832 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap-sweetalert/dist/sweetalert.min.js-388 into controller test4
+2024-05-22 18:47:53,837 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/js/cart.js-386 into controller test4
+2024-05-22 18:47:53,842 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap-sweetalert/dist/sweetalert.css-387 into controller test4
+2024-05-22 18:47:54,126 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-389 into controller test4
+2024-05-22 18:47:54,131 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/viewcart-390 into controller test4
+2024-05-22 18:47:54,331 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-391 into controller test4
+2024-05-22 18:47:54,345 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/viewcart-392 into controller test4
+2024-05-22 18:47:54,650 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/view-393 into controller test4
+2024-05-22 18:47:55,056 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/view-394 into controller test4
+2024-05-22 18:48:00,839 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/spocs-395 into controller test4
+2024-05-22 18:48:06,542 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/deletecart-396 into controller test4
+2024-05-22 18:48:06,848 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/deletecart-397 into controller test4
+2024-05-22 18:48:08,270 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/index.html-398 into controller test4
+2024-05-22 18:48:08,581 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video-js.min.css-400 into controller test4
+2024-05-22 18:48:08,585 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/video.js/dist/video.min.js-401 into controller test4
+2024-05-22 18:48:08,587 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latostyle.css-402 into controller test4
+2024-05-22 18:48:08,590 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/css/latofonts.css-403 into controller test4
+2024-05-22 18:48:08,592 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/jquery/dist/jquery.min.js-404 into controller test4
+2024-05-22 18:48:08,595 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/css/bootstrap.min.css-399 into controller test4
+2024-05-22 18:48:08,786 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js-405 into controller test4
+2024-05-22 18:48:08,791 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/js/index.js-408 into controller test4
+2024-05-22 18:48:08,795 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/tether/dist/js/tether.min.js-406 into controller test4
+2024-05-22 18:48:08,879 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/node_modules/bootstrap/dist/js/bootstrap.min.js-407 into controller test4
+2024-05-22 18:48:08,882 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/Samsung1.jpg-410 into controller test4
+2024-05-22 18:48:08,884 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/nexus1.jpg-409 into controller test4
+2024-05-22 18:48:09,082 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/iphone1.jpg-411 into controller test4
+2024-05-22 18:48:09,086 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/bm.png-412 into controller test4
+2024-05-22 18:48:09,089 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/front.jpg-413 into controller test4
+2024-05-22 18:48:09,195 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/config.json-414 into controller test4
+2024-05-22 18:48:09,492 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-416 into controller test4
+2024-05-22 18:48:09,497 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/entries-415 into controller test4
+2024-05-22 18:48:09,697 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/check-417 into controller test4
+2024-05-22 18:48:09,701 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/iphone_6.jpg-422 into controller test4
+2024-05-22 18:48:09,704 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/Nexus_6.jpg-420 into controller test4
+2024-05-22 18:48:09,706 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/HTC_M9.jpg-423 into controller test4
+2024-05-22 18:48:09,709 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/xperia_z5.jpg-421 into controller test4
+2024-05-22 18:48:09,712 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/Lumia_1520.jpg-419 into controller test4
+2024-05-22 18:48:09,810 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/galaxy_s6.jpg-418 into controller test4
+2024-05-22 18:48:10,016 INFO o.a.j.p.h.p.ProxyControl: Add sample test4/imgs/sony_vaio_5.jpg-424 into controller test4
+2024-05-22 18:48:12,664 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
+2024-05-22 18:50:05,199 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:50:05,199 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:50:05,203 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:50:05,255 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:50:05,256 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:50:05,256 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:50:05,256 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:50:05,258 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:50:05,258 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:50:05,259 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:50:19,271 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:50:19,272 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:50:19,274 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:50:19,274 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:50:45,389 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:50:45,389 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:50:45,393 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:50:45,449 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:50:45,449 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:50:45,449 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:50:45,449 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:50:45,454 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:50:45,454 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:50:45,457 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:50:59,037 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:50:59,038 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:50:59,040 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:50:59,041 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:52:46,055 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:52:46,056 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:52:46,059 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:52:46,111 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:52:46,112 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:52:46,112 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:52:46,112 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:52:46,113 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:52:46,113 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:52:46,115 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:52:59,339 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:52:59,339 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:52:59,340 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:52:59,340 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-05-22 18:56:52,732 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-05-22 18:56:52,732 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-05-22 18:56:52,735 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-05-22 18:56:52,790 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-05-22 18:56:52,790 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-05-22 18:56:52,790 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-05-22 18:56:52,790 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-05-22 18:56:52,792 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-05-22 18:56:52,792 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-05-22 18:56:52,794 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-05-22 18:57:06,489 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-05-22 18:57:06,489 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-05-22 18:57:06,490 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-05-22 18:57:06,490 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
